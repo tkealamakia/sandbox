@@ -16,6 +16,12 @@ public class TreeNode {
     this.value = value;
     this.right = right;
     this.left = left;
+  }
+
+  public TreeNode(int value, TreeNode right, TreeNode left, TreeNode parent) {
+    this.value = value;
+    this.right = right;
+    this.left = left;
     this.parent = parent;
   }
 
