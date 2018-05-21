@@ -1,9 +1,10 @@
 package com.tsunazumi.algorithms.structures;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class GraphNode {
+public class GraphNode implements Comparable<GraphNode> {
 
   int value;
   State state;
@@ -32,5 +33,12 @@ public class GraphNode {
 
   public String toString() {
     return String.valueOf(value);
+  }
+
+  @Override
+  public int compareTo(GraphNode o) {
+    if (this.value > o.value) return 1;
+    if (this.value < o.value) return -1;
+    return 0;
   }
 }
