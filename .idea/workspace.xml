@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="726ab79b-d04f-4be5-b500-5d2bcb64ae38" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/Cc48b.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/Cc48c.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/Foo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/InsertionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/structures/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsunazumi/misc/DirectedGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/CreateDBInsert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tsunazumi/misc/CreateDBInsert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/ReverseArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tsunazumi/misc/ReverseArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/StringPermutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tsunazumi/misc/StringPermutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/structures/GraphNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tsunazumi/algorithms/structures/GraphNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/tsunazumi/algorithms/Fib.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/tsunazumi/algorithms/Foo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/tsunazumi/algorithms/InsertionSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/tsunazumi/algorithms/Memo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/tsunazumi/misc/CreateDBInsert.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/tsunazumi/misc/CreateDBInsert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tsunazumi/misc/ParseString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tsunazumi/misc/ParseString.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,17 +27,17 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/com/tsunazumi/strategy/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state>
               <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Memo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Memo.java">
+      <file leaf-file-name="ParseString.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/ParseString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -48,7 +45,7 @@
       <file leaf-file-name="ReverseArray.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/ReverseArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
+            <state>
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
@@ -57,7 +54,7 @@
       <file leaf-file-name="StringPermutation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/StringPermutation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state>
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
@@ -66,26 +63,8 @@
       <file leaf-file-name="CreateDBInsert.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/CreateDBInsert.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state>
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fib.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Fib.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Foo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Foo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -93,7 +72,7 @@
       <file leaf-file-name="Libraian.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/com/tsunazumi/strategy/Libraian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
+            <state>
               <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
@@ -102,7 +81,7 @@
       <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/com/tsunazumi/strategy/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
+            <state>
               <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
             </state>
           </provider>
@@ -111,7 +90,7 @@
       <file leaf-file-name="Profession.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/com/tsunazumi/strategy/Profession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state>
               <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
@@ -170,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/com/tsunazumi/misc/StringPermutation.java" />
         <option value="$PROJECT_DIR$/src/com/tsunazumi/misc/CreateDBInsert.java" />
         <option value="$PROJECT_DIR$/src/com/tsunazumi/algorithms/Foo.java" />
+        <option value="$PROJECT_DIR$/src/com/tsunazumi/misc/ParseString.java" />
       </list>
     </option>
   </component>
@@ -182,10 +162,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="838" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="448" />
+    <option name="width" value="1280" />
+    <option name="height" value="948" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -207,24 +187,6 @@
               <item name="sandbox" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="strategy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="misc" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -234,7 +196,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -260,7 +223,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Foo">
+  <component name="RunManager" selected="Application.ReverseArray">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -270,7 +233,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tsunazumi.misc.*" />
+          <option name="PATTERN" value="com.tsunazumi.algorithms.udemy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -281,18 +244,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tsunazumi.misc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tsunazumi.misc.InsertionSort" />
-      <module name="sandbox" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tsunazumi.misc.*" />
+          <option name="PATTERN" value="com.tsunazumi.algorithms.udemy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -303,7 +255,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tsunazumi.misc.*" />
+          <option name="PATTERN" value="com.tsunazumi.algorithms.udemy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -314,7 +266,18 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.tsunazumi.misc.*" />
+          <option name="PATTERN" value="com.tsunazumi.algorithms.udemy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ReverseArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsunazumi.misc.ReverseArray" />
+      <module name="sandbox" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tsunazumi.algorithms.udemy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -360,30 +323,20 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.InsertionSort" />
       <item itemvalue="Application.DirectedGraph" />
       <item itemvalue="Application.ParseString" />
       <item itemvalue="Application.Foo" />
+      <item itemvalue="Application.ReverseArray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReverseArray" />
+        <item itemvalue="Application.ParseString" />
         <item itemvalue="Application.Foo" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.ParseString" />
         <item itemvalue="Application.DirectedGraph" />
-        <item itemvalue="Application.InsertionSort" />
       </list>
     </recent_temporary>
   </component>
@@ -405,15 +358,16 @@
       <workItem from="1526398876534" duration="3540000" />
       <workItem from="1526585054563" duration="51000" />
       <workItem from="1526650618325" duration="3351000" />
+      <workItem from="1527130413569" duration="114000" />
+      <workItem from="1527134128969" duration="59000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9928000" />
+    <option name="totallyTimeSpent" value="10101000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="840" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3900135" />
@@ -421,24 +375,24 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24831308" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24804178" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2811159" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28055555" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32928476" />
-      <window_info anchor="right" id="SciView" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34952766" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="LuaJ" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32928476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,13 +457,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Cc45b.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Cc36.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-133">
@@ -693,13 +640,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="264" column="29" selection-start-line="264" selection-start-column="29" selection-end-line="264" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/Comparator.java" />
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Cc46.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
@@ -750,13 +691,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/InsertionSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/InsertionSort.java" />
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/output.txt">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="-688" />
@@ -773,94 +708,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="e#132#133#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/Lambda">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/Lambda" />
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/com/tsunazumi/strategy/Libraian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
+        <state>
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/com/tsunazumi/strategy/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
+        <state>
           <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/com/tsunazumi/strategy/Profession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state>
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/ParseString">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/ParseString" />
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/com/tsunazumi/strategy/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state>
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Memo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Memo.java" />
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/ReverseArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
+        <state>
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/StringPermutation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state>
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/CreateDBInsert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state>
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Fib.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Fib.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Foo.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/misc/ParseString.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tsunazumi/algorithms/Foo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="300">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>

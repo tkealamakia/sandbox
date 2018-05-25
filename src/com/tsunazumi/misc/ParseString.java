@@ -24,7 +24,6 @@ class CharIterator implements Iterator<String> {
     ca = str.toCharArray();
   }
 
-
   @Override
   public String next() {
     StringBuilder token = new StringBuilder();
