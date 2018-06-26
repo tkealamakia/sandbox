@@ -1,4 +1,4 @@
-package com.tsunazumi.algorithms;
+package com.tsunazumi.misc;
 
 import java.util.Iterator;
 
