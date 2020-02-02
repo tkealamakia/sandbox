@@ -1,6 +1,4 @@
-package com.tsunazumi.misc.buchalka;
-
-import sun.text.resources.cldr.en.FormatData_en_TT;
+package com.tsunazumi.buchalka;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.tsunazumi.misc;
+package com.tsunazumi.hackerrank;
 
 public class Steps {
   public static void main(String[] args) {

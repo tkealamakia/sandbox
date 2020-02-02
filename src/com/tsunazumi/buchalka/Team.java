@@ -1,4 +1,4 @@
-package com.tsunazumi.misc.buchalka;
+package com.tsunazumi.buchalka;
 
 public abstract class Team implements Comparable<Team> {
   private String name;

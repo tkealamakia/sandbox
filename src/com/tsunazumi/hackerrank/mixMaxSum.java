@@ -1,4 +1,4 @@
-package com.tsunazumi.misc;
+package com.tsunazumi.hackerrank;
 
 public class mixMaxSum {
   public static void main(String[] args) {

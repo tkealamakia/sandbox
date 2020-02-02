@@ -1,4 +1,4 @@
-package com.tsunazumi.misc.buchalka;
+package com.tsunazumi.buchalka;
 
 public class FootballTeam extends Team {
 

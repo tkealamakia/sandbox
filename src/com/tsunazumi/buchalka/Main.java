@@ -1,4 +1,4 @@
-package com.tsunazumi.java;
+package com.tsunazumi.buchalka;
 
 import java.util.concurrent.locks.ReentrantLock;
 
