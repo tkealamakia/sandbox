@@ -5,8 +5,9 @@ import java.util.Random;
 public class Lottery {
   public static void main(String[] args) {
     Random rand = new Random();
-    int entries = 1000000;
-    int value = rand.nextInt(entries);
+    int entries = 100;
+    //int value = rand.nextInt(entries);
+    int value = 3;
     int count = 0;
     boolean numberIsFound = false;
 

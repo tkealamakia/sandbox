@@ -4,7 +4,7 @@ public class BirthdayCandles {
 
   public static void main(String[] args) {
 
-    int[] ar = {4,3,3,3};
+    int[] ar = {1,3,3,3};
 
     int max = 0;
     for (int i = 0; i < ar.length; i++) {

@@ -1,5 +1,6 @@
 package com.tsunazumi.misc;
 
+import com.tsunazumi.algorithms.structures.Graph;
 import com.tsunazumi.algorithms.structures.GraphNode;
 
 import java.util.*;
