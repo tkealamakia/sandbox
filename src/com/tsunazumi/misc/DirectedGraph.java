@@ -18,13 +18,13 @@ public class DirectedGraph {
     node3.addAdjacent(node4);
     node4.addAdjacent(node2);
 
-    Collection <GraphNode> col2 =  getReachable(node2);
-    System.out.println(col2);
+    Collection<GraphNode> col = new TreeSet<>();
+    Collection <GraphNode> col3 =  getReachable(node3, col);
+    System.out.println(col3);
 
   }
 
-  public static Collection<GraphNode> getReachable(GraphNode start) {
-    Collection<GraphNode> col = new TreeSet<>();
+  public static Collection<GraphNode> getReachable(GraphNode start, Collection<GraphNode> col) {
     addToCol(col, start);
 
     return col;
