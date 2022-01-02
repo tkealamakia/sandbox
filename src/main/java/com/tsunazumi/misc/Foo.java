@@ -4,6 +4,8 @@ import java.util.*;
 
 public class Foo {
   public static void main(String [] args) throws InterruptedException {
+    String url = "http://foo.com/aps/";
+    System.out.println(url.substring(0, url.length()-1));
     List<String> values = new ArrayList<>();
     int total = 0;
     int runs = 100;

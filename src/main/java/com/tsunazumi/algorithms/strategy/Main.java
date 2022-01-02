@@ -6,5 +6,6 @@ public class Main {
     Person tom = new Person();
     tom.setProfession(new Engineer());
     tom.work();
+		System.out.println("hello Macbook Air M1");
   }
 }
