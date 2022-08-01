@@ -26,7 +26,7 @@ public class Main {
     Future<String> future = executorService.submit(new Callable<String>() {
       @Override
       public String call() throws Exception {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         System.out.println(ThreadColor.ANSI_RED);
         return "This is the callable result";
       }
