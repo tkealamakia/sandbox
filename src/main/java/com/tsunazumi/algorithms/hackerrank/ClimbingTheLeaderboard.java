@@ -1,78 +1,100 @@
 package com.tsunazumi.algorithms.hackerrank;
 
+import java.util.*;
+
 public class ClimbingTheLeaderboard {
   public static void main(String[] args) {
-//    int[] scores = { 100, 100, 50, 40, 40, 20, 10 };
-//    int[] alice = { 5, 25, 50 , 120 };
-    int[] scores = { 100, 90, 90, 80, 75, 60 };
-    int[] alice = { 50, 65, 77, 90, 102 };
-    int[] results = climbingLeaderboard(scores, alice);
-    for (int i = 0; i < results.length; i++) {
-      System.out.println(results[i]);
+    List<Integer> scores = Arrays.asList( 100, 100, 50, 40, 40, 20, 10);
+    List<Integer> alice = Arrays.asList(5,25,50,120);
+    List<Integer> results = climbingLeaderboard(scores, alice);
+    for (Integer i : results) {
+      System.out.println(i);
     }
 
+  }
+  public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> player) {
+    int[] scores = new int[ranked.size()];
+    int[] person = new int[player.size()];
+    for (int i = 0; i< scores.length; i++) {
+      scores[i] = ranked.get(i);
+    }
+    for (int i = 0; i< person.length; i++) {
+      person[i] = player.get(i);
+    }
+    int [] foo = climbingLeaderboardSlow(scores, person);
+    List<Integer> results = new ArrayList<>();
+    for (int i = 0; i<foo.length; i++) {
+      results.add(foo[i]);
+    }
+    return results;
   }
 
   static int[] climbingLeaderboardSlow(int[] scores, int[] alice) {
-    //convert scores to ranking
+    //eliminate dups
+    Set<Integer> set = new LinkedHashSet<>();
+    for (int i=0; i< scores.length; i++) {
+      set.add(scores[i]);
+    }
+    Integer[] arr = new Integer[set.size()];
+    int x = 0;
+    for (Integer i : set) {
+      arr[x++] = i;
+    }
+    int[] intArr = new int[arr.length];
+    for (int i=0; i< arr.length; i++) {
+      intArr[i] = arr[i];
+    }
 
-//    int[] scores = { 100, 100, 50, 40, 40, 20, 10 };
-//    int[] alice = { 5, 25, 50 , 120 };
     int[] results = new int[alice.length];
-    int timesSeenNumberTwice = 0;
-    Outer:
-    for (int i = alice.length-1; i >= 0; i--) {
-      //loop through scores
-      for (int j = 0; j < scores.length; j++) {
-        if (j != 0 && scores[j] == scores[j-1]) {
-          timesSeenNumberTwice++;
+    for (int i=0; i < alice.length; i++) {
+      for (int j=0; j < intArr.length; j++) {
+        int target = alice[i];
+        int current = intArr[j];
+        if (target >= current) {
+          results[i] = j + 1;
+          break;
         }
-        if (alice[i] > scores[j]) {
-          results[i] = j+1-timesSeenNumberTwice;
-          timesSeenNumberTwice = 0;
-          continue Outer;
-        }
-        if (alice[i] == scores[j]) {
-          results[i] = j+1-timesSeenNumberTwice;
-          timesSeenNumberTwice = 0;
-          continue Outer;
-        }
-        if (j == scores.length-1) {
-          results[i] = scores.length+1-timesSeenNumberTwice;
+        if (target < current && j == intArr.length -1)
+          results[i] = intArr.length + 1;
+        if (target < current) {
+          continue;
         }
       }
+
     }
     return results;
   }
 
-  static int[] climbingLeaderboard(int[] scores, int[] alice) {
-//    int[] scores = { 100, 100, 50, 40, 40, 20, 10 };
-//    int[] alice = { 5, 25, 50 , 120 };
-    int[] results = new int[alice.length];
-    int timesSeenNumberTwice = 0;
-    Outer:
-    for (int i = alice.length-1; i >= 0; i--) {
-      //loop through scores
-      for (int j = 0; j < scores.length; j++) {
-        if (j != 0 && scores[j] == scores[j-1]) {
-          timesSeenNumberTwice++;
-        }
-        if (alice[i] > scores[j]) {
-          results[i] = j+1-timesSeenNumberTwice;
-          timesSeenNumberTwice = 0;
-          continue Outer;
-        }
-        if (alice[i] == scores[j]) {
-          results[i] = j+1-timesSeenNumberTwice;
-          timesSeenNumberTwice = 0;
-          continue Outer;
-        }
-        if (j == scores.length-1) {
-          results[i] = scores.length+1-timesSeenNumberTwice;
-        }
-      }
+  static int findPosition(int score, int[] scores, int position) {
+    int index = (int)Math.floor((double)(scores.length / 2));
+    if (scores.length == 1) {
+      return position;
     }
-    return results;
+
+    int mid = scores[index];
+
+    if (score == mid) {
+      return position;
+    } else  if (score < mid) {
+      // search right
+      // Create a new right array
+      int[] newArray = new int[scores.length - index];
+      for (int i=0; i < newArray.length; i++) {
+        newArray[i] = scores[index+i];
+      }
+      findPosition(score, newArray, index + position);
+      return position + index;
+    } else {
+      // search left
+      // Create a new left array
+      int[] newArray = new int[scores.length - index];
+      for (int i=0; i < newArray.length; i++) {
+        newArray[i] = scores[i];
+      }
+      findPosition(score, newArray, index - position);
+      return position - index;
+    }
 
   }
+
 }
