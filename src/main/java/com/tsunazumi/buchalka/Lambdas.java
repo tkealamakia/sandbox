@@ -9,6 +9,11 @@ import java.util.function.Supplier;
 public class Lambdas {
 
   public static void main(String[] args) {
+
+    new Thread(() -> {
+      System.out.println("foo");
+      System.out.println("bar");
+    }).start();
     Runnable runnable = () -> {
         String myString = "Let's split this up into an array";
         String[] parts = myString.split(" ");
