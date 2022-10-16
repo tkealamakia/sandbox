@@ -1,5 +1,9 @@
 package com.tsunazumi.algorithms.hackerrank.datastructures;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 class SinglyLinkedListNode {
   int data;
   SinglyLinkedListNode next;
@@ -45,6 +49,14 @@ public class InsertTail {
     node = insertNodeAtHead(node, 392);
     node = insertNodeAtHead(node, 975);
     node = insertNodeAtHead(node, 321);
+
+    List foobar = Arrays.asList("bobo", "foo", "bar");
+    foobar.forEach(s -> System.out.println(s));
+    Object foo = foobar.stream()
+        .filter(s -> !s.equals("foo"))
+        .collect(Collectors.toList());
+    System.out.println(foo);
+
 
   }
 }

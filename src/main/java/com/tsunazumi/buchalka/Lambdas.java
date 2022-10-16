@@ -19,12 +19,14 @@ public class Lambdas {
     }).start();
 
     System.out.println("================");
+    int number = 25;
     Runnable runnable = () -> {
         String myString = "Let's split";
         String[] parts = myString.split(" ");
         for (String part: parts) {
           System.out.println(part);
         }
+      System.out.println(number);
     };
 
     new Thread(runnable).start();
