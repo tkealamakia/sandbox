@@ -1,14 +1,21 @@
 package com.tsunazumi.buchalka;
 
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class Lambdas {
 
   public static void main(String[] args) {
+
+    List<Integer> foo = Arrays.asList(1,2,3);
+    int i = foo.stream()
+        .mapToInt(Integer::intValue)
+        .min().orElseThrow(NoSuchElementException::new);
+    System.out.println(i);
+
 
     new Thread(() -> {
       String myString = "Let's split";
@@ -43,9 +50,12 @@ public class Lambdas {
 //
 //    System.out.println(everySecondCharacter(lambdaFunction, "weoifjwfjew"));
 //
-//    Supplier<String> iLoveJava = () ->  "I love Java!" ;
-//    String supplierResult = iLoveJava.get();
-//    System.out.println(supplierResult);
+
+    Predicate<Integer> foobarPredicate =  x -> x > 5;
+    System.out.println(foobarPredicate.test(6));
+
+    Supplier<Integer> randomIntSupplier = () -> new Random().nextInt(100);
+    System.out.println(randomIntSupplier.get());
 //
 //    List<String> topNames2015 = Arrays.asList(
 //        "Amelia",
