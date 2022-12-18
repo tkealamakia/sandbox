@@ -27,7 +27,9 @@ fun main(args: Array<String>) {
   println(car.name)
   car.name = "Toyota"
   println(car.name)
-  car.name = ""
+
+  val list = mutableListOf("Hello")
+  println(list)
 
 
 
