@@ -1,4 +1,4 @@
-package com.tsunazumi.algorithms.hackerrank.datastructures;
+package com.tsunazumi.algorithms.hackerrank.datastructures.archive;
 
 class SinglyLinkedList {
   static Node head;

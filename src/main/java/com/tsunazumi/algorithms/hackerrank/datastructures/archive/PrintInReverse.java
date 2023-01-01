@@ -1,4 +1,4 @@
-package com.tsunazumi.algorithms.hackerrank.datastructures;
+package com.tsunazumi.algorithms.hackerrank.datastructures.archive;
 
 import java.util.Stack;
 
