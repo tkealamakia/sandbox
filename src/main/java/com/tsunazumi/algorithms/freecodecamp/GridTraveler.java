@@ -6,7 +6,7 @@ import java.util.Map;
 public class GridTraveler {
   public static void main(String[] args) {
     Map<String, Long> memo = new HashMap<>();
-    long result = gridTraveler(18,18, memo);
+    long result = gridTraveler(3,3, memo);
     System.out.println(result);
 
   }
