@@ -1,8 +1,8 @@
 package com.tsunazumi.dsa.structures;
 
 public class SinglyLinkedList {
-  public SinglyLinkedListNode head;
-  public SinglyLinkedListNode tail;
+  public ListNode head;
+  public ListNode tail;
 
   public SinglyLinkedList() {
     this.head = null;
@@ -10,7 +10,7 @@ public class SinglyLinkedList {
   }
 
   public void insertNode(int nodeData) {
-    SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
+    ListNode node = new ListNode(nodeData);
 
     if (this.head == null) {
       this.head = node;
@@ -21,11 +21,11 @@ public class SinglyLinkedList {
     this.tail = node;
   }
 
-  public void print(SinglyLinkedListNode node) {
+  public void print(ListNode node) {
     if (node == null) {
       return;
     }
-    System.out.println(node.data);
+    System.out.println(node.val);
     print(node.next);
   }
 }

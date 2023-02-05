@@ -1,7 +1,7 @@
 package com.tsunazumi.dsa.hackerrank.datastructures.twentythree;
 
 import com.tsunazumi.dsa.structures.SinglyLinkedList;
-import com.tsunazumi.dsa.structures.SinglyLinkedListNode;
+import com.tsunazumi.dsa.structures.ListNode;
 
 public class DeleteANode {
 
@@ -18,13 +18,13 @@ public class DeleteANode {
 
     sll.print(sll.head);
 
-    SinglyLinkedListNode result = deleteNode(sll.head, 3);
+    ListNode result = deleteNode(sll.head, 3);
 
     System.out.println("done");
 
 
   }
-  public static SinglyLinkedListNode deleteNode(SinglyLinkedListNode llist, int position) {
+  public static ListNode deleteNode(ListNode llist, int position) {
     if (position == 0) {
       return llist.next;
     }
@@ -33,9 +33,9 @@ public class DeleteANode {
       return null;
     }
 
-    SinglyLinkedListNode head = llist;
-    SinglyLinkedListNode previousNode = llist;
-    SinglyLinkedListNode current = llist;
+    ListNode head = llist;
+    ListNode previousNode = llist;
+    ListNode current = llist;
 
     while (llist.next != null) {
       if (currentPosition == position && current.next != null) {
