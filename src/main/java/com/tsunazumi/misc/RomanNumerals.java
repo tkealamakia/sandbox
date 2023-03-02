@@ -4,7 +4,7 @@ public class RomanNumerals {
 
   public static void main(String[] args) {
 
-    int i = 971;
+    int i = 50;
     System.out.println(convertNumberToRoman(i));
 
 
