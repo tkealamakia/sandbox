@@ -1,16 +1,13 @@
-package com.tsunazumi.misc;
+package com.tsunazumi.scratch;
 
 public class BinarySearch {
   public static void main(String[] args) {
     int[] haystack = {1,3,5,6,9,22,31};
-    boolean result = isNeedleInHaystack(5, haystack);
+    boolean result = isNeedleInHaystack(3, haystack);
     System.out.println(result);
   }
 
-  private static boolean isNeedleInHaystack(int needle, int[] haystack) {
-    if (haystack.length == 0) {
-      return false;
-    }
+  static boolean isNeedleInHaystack(int needle, int[] haystack) {
     int low = 0;
     int high = haystack.length;
 
@@ -21,11 +18,11 @@ public class BinarySearch {
       }
       if (haystack[mid] > needle) {
         high = mid;
-      } else {
+      }
+      if (haystack[mid] < needle) {
         low = mid + 1;
       }
     }
     return false;
-
   }
 }

@@ -1,7 +1,11 @@
-package com.tsunazumi.misc;
+package com.tsunazumi.scratch;
 
-import com.tsunazumi.dsa.structures.SinglyLinkedList;
 import com.tsunazumi.dsa.structures.ListNode;
+import com.tsunazumi.dsa.structures.SinglyLinkedList;
+
+import java.util.LinkedList;
+import java.util.List;
+
 
 public class ReverseLinkedList {
   public static void main(String[] args) {
@@ -9,14 +13,13 @@ public class ReverseLinkedList {
     list.insertNode(1);
     list.insertNode(2);
     list.insertNode(3);
-    ListNode result = reverseList(list.head);
+    ListNode result = reverse(list.head);
     list.print(result);
   }
 
-  public static ListNode reverseList(ListNode head) {
+  public static ListNode reverse(ListNode head) {
     ListNode prev = null;
     ListNode current = head;
-
     while (current != null) {
       ListNode next = current.next;
       current.next = prev;
@@ -24,6 +27,5 @@ public class ReverseLinkedList {
       current = next;
     }
     return prev;
-
   }
 }

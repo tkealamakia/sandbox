@@ -11,13 +11,9 @@ public class BubbleSort {
 
   }
   public static void sort(int[] list) {
-    int len = list.length;
-    // outer loop is only meant to move the sorted boundary to the left
-    for (int i = 0; i < len; i++) {
-      for (int j = 0; j < len - i - 1; j++) {
-        // check
+    for (int i = 0; i < list.length; i++) {
+      for (int j = 0; j < list.length - 1 - i; j++) {
         if (list[j] > list[j+1]) {
-          // swap
           int temp = list[j];
           list[j] = list[j+1];
           list[j+1] = temp;
@@ -25,4 +21,5 @@ public class BubbleSort {
       }
     }
   }
+
 }
