@@ -14,10 +14,6 @@ public class DeleteNode {
     ;
   }
 
-  private static void deleteNode(ListNode node) {
-    if
-  }
-
   private static ListNode deleteAt(SinglyLinkedList list, int i) {
     ListNode current = list.head;
     ListNode prev = null;
