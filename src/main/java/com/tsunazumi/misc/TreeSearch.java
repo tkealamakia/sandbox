@@ -33,7 +33,8 @@ public class TreeSearch {
 //    depthFirstWalk(three, list);
 //    list.forEach(System.out::println);
 
-    System.out.println(depthFirstSearch(three, 9));
+//    System.out.println(depthFirstSearch(three, 9));
+    System.out.println(levelOrder(three));
   }
 
   public static int maxDepth(TreeNode root) {
@@ -99,6 +100,34 @@ public class TreeSearch {
     }
     return false;
 
+  }
+
+  public static List<List<Integer>> levelOrder(TreeNode root) {
+    List<List<Integer>> result = new ArrayList<>();
+    if (root == null) {
+      return result;
+    }
+
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.add(root);
+
+    while (!queue.isEmpty()) {
+      int qlength = queue.size();
+      List<Integer> level = new ArrayList<>();
+
+      for (int i = 0; i < qlength; i++) {
+        TreeNode node = queue.poll();
+        level.add(node.value);
+        if (node.left != null) {
+          queue.add(node.left);
+        }
+        if (node.right != null) {
+          queue.add(node.right);
+        }
+      }
+      result.add(level);
+    }
+    return result;
   }
 
 }

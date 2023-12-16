@@ -1,4 +1,4 @@
-package com.tsunazumi.dsa.theprimagen;
+package com.tsunazumi.misc;
 
 public class TwoCrystalBalls {
   public static void main(String[] args) {
