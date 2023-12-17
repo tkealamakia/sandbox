@@ -1,4 +1,4 @@
-package com.tsunazumi.scratch;
+package com.tsunazumi.interview;
 
 public class Palindrome {
 

@@ -1,4 +1,4 @@
-package com.tsunazumi.misc;
+package com.tsunazumi.interview;
 
 import java.util.Collection;
 

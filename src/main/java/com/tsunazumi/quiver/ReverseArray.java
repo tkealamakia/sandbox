@@ -1,4 +1,4 @@
-package com.tsunazumi.misc;
+package com.tsunazumi.quiver;
 
 import java.util.Arrays;
 

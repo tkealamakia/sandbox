@@ -1,4 +1,4 @@
-package com.tsunazumi.misc;
+package com.tsunazumi.quiver;
 
 import com.tsunazumi.dsa.structures.SinglyLinkedList;
 import com.tsunazumi.dsa.structures.ListNode;

@@ -1,4 +1,4 @@
-package com.tsunazumi.misc;
+package com.tsunazumi.quiver;
 
 public class TwoCrystalBalls {
   public static void main(String[] args) {

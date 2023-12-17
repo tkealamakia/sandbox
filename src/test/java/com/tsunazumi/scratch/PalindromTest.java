@@ -1,5 +1,6 @@
 package com.tsunazumi.scratch;
 
+import com.tsunazumi.interview.Palindrome;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
