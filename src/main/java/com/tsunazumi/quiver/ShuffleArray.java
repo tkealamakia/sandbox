@@ -37,10 +37,10 @@ public class ShuffleArray {
     ShuffleArray sa = new ShuffleArray(nums);
     int[] shuffled = sa.shuffle();
     print(shuffled);
-    sa.reset();
-    System.out.println();
-    int[] shuffled2 = sa.shuffle();
-    print(shuffled2);
+//    sa.reset();
+//    System.out.println();
+//    int[] shuffled2 = sa.shuffle();
+//    print(shuffled2);
   }
 
   static void print(int[] nums) {
