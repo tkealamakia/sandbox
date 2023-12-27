@@ -2,6 +2,9 @@ package com.tsunazumi.dsa.leetcode;
 
 import com.tsunazumi.dsa.structures.ListNode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LinkedListCycle {
 
   public static void main(String[] args) {
@@ -15,34 +18,22 @@ public class LinkedListCycle {
     zero.next.next.next = three;
     zero.next.next.next.next = one;
 
-    System.out.println(detectCycle(zero).val);
-  }
-  public static ListNode intersection(ListNode head) {
-    ListNode slow = head;
-    ListNode fast = head;
-    while (fast != null && fast.next != null) {
-      slow = slow.next;
-      fast = fast.next.next;
-      if (slow == fast) {
-        return slow;
-      }
-    }
-    return null;
+    System.out.println(hasCycle(zero));
   }
 
-  public static ListNode detectCycle(ListNode head) {
+  public static boolean hasCycle(ListNode head) {
     if (head == null || head.next == null) {
-      return null;
+      return false;
     }
-    ListNode intersect = intersection(head);
-    if (intersect == null) {
-      return null;
+    ListNode current = head;
+    Set<ListNode> set = new HashSet<>();
+    while (current.next != null) {
+      if (set.contains(current)) {
+        return true;
+      }
+      set.add(current);
+      current = current.next;
     }
-    ListNode start = head;
-    while (intersect != start) {
-      start = start.next;
-      intersect = intersect.next;
-    }
-    return start;
+    return false;
   }
 }
