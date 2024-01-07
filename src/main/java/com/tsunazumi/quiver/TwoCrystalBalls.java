@@ -12,7 +12,7 @@ public class TwoCrystalBalls {
     int jump = (int) Math.floor(Math.sqrt(breaks.length));
     int i = jump;
     for (; i < breaks.length; i += jump) {
-      if (breaks[i] == true) {
+      if (breaks[i]) {
         break;
       }
     }
