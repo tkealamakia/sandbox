@@ -26,14 +26,14 @@ public class TreeSearch {
     nine.left = five;
     nine.right = eight;
 
-//    System.out.println(depthFirstSearch(three, 90));
+//    System.out.println(depthFirstSearch(three, 9));
     System.out.println(breadthFirstSearch(three, 5));
 
     List<Integer> list = new ArrayList<>();
-    depthFirstWalk(three, list);
+//    depthFirstWalk(three, list);
     list.forEach(System.out::println);
 
-    System.out.println(maxDepth(three));
+//    System.out.println(maxDepth(three));
 
   }
 
@@ -49,6 +49,29 @@ public class TreeSearch {
   }
 
   public static boolean breadthFirstSearch(TreeNode root, int needle) {
+    if (root == null) {
+      return false;
+    }
+    if (root.value == needle) {
+      return true;
+    }
+
+    Queue<TreeNode> list = new LinkedList<>();
+    list.add(root);
+
+    while (!list.isEmpty()) {
+      TreeNode node = list.poll();
+      if (node.value == needle) {
+        return true;
+      }
+      if (node.left != null) {
+        list.add(node.left);
+      }
+      if (node.right != null) {
+        list.add(node.right);
+      }
+    }
+
     return false;
   }
 
