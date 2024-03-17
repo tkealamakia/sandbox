@@ -13,11 +13,21 @@ public class ReverseLinkedList {
     list.insertNode(1);
     list.insertNode(2);
     list.insertNode(3);
+    list.insertNode(4);
     ListNode result = reverse(list.head);
     list.print(result);
   }
 
   public static ListNode reverse(ListNode head) {
-    return null;
+    ListNode prev = null;
+    ListNode current = head;
+
+    while (current != null) {
+      ListNode next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    return prev;
   }
 }
