@@ -10,6 +10,6 @@ public class MaxSubarray {
 
   }
   static int maxSubArray(int[] nums) {
-    return 0;
+    return -1;
   }
 }

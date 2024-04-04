@@ -13,16 +13,6 @@ public class CanSum {
   }
 
   static boolean canSum(int targetSum, List<Integer> list, Map<Integer, Boolean> memo) {
-    if (memo.containsKey(targetSum)) { return memo.get(targetSum); }
-    if (targetSum == 0) { return true; }
-    if (targetSum < 0) { return false; }
-    for (Integer i : list) {
-      if (canSum(targetSum - i, list, memo)) {
-        memo.put(targetSum, true);
-        return true;
-      }
-    }
-    memo.put(targetSum, false);
     return false;
   }
 }
