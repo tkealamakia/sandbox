@@ -2,7 +2,7 @@ package com.tsunazumi.quiver;
 
 public class PowerOfThree {
   public static void main(String[] args) {
-    boolean result = isPowerOfThree(-1);
+    boolean result = isPowerOfThree(27);
     System.out.println(result);
   }
 

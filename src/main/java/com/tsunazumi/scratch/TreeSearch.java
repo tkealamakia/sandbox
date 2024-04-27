@@ -45,41 +45,10 @@ public class TreeSearch {
   }
 
   public static boolean depthFirstSearch(TreeNode root, int needle) {
-    if (root == null) {
-      return false;
-    }
-    if (root.value == needle) {
-      return true;
-    }
-
-    boolean leftResult = depthFirstSearch(root.left, needle);
-    if (leftResult) {
-      return true;
-    }
-    return depthFirstSearch(root.right, needle);
-
-//    return false;
+    return false;
   }
 
   public static boolean breadthFirstSearch(TreeNode root, int needle) {
-    if (root.value == needle) {
-      return true;
-    }
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.add(root);
-    while (!queue.isEmpty()) {
-      TreeNode node = queue.poll();
-      if (node.value == needle) {
-        return true;
-      }
-      if (node.right != null) {
-        queue.add(node.right);
-      }
-      if (node.left != null) {
-        queue.add(node.left);
-      }
-    }
-
     return false;
   }
 
