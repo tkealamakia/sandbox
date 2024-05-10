@@ -7,12 +7,6 @@ public class PowerOfThree {
   }
 
   static boolean isPowerOfThree(int i) {
-    if (i < 0) {
-      return false;
-    }
-    if (i == 0) {
-      return true;
-    }
-    return (isPowerOfThree(i - 3));
+    return false;
   }
 }

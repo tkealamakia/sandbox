@@ -26,8 +26,8 @@ public class TreeSearch {
     nine.left = five;
     nine.right = eight;
 
-    System.out.println(depthFirstSearch(three, 9));
-//    System.out.println(breadthFirstSearch(three, 1));
+//    System.out.println(depthFirstSearch(three, 4));
+    System.out.println(breadthFirstSearch(three, 8));
 
     List<Integer> list = new ArrayList<>();
 //    depthFirstWalk(three, list);
@@ -47,6 +47,7 @@ public class TreeSearch {
   public static boolean depthFirstSearch(TreeNode root, int needle) {
     return false;
   }
+
 
   public static boolean breadthFirstSearch(TreeNode root, int needle) {
     return false;

@@ -60,18 +60,14 @@ public class TreeSearch {
 
   public static boolean depthFirstSearch(TreeNode root, int needle) {
     if (root == null) {
-      return false;
+      return false; // Tree is empty or we've reached a leaf with no value
     }
     if (root.value == needle) {
-      return true;
+      return true;  // Found the value
     }
 
-    boolean leftResult = depthFirstSearch(root.left, needle);
-    // if found on the left subtree, no need to check the right subtree
-    if (leftResult) {
-      return true;
-    }
-    return depthFirstSearch(root.right, needle);
+    // Recurse on left and right subtrees:
+    return depthFirstSearch(root.left, needle) || depthFirstSearch(root.right, needle);
   }
 
   public static boolean breadthFirstSearch(TreeNode root, int needle) {
