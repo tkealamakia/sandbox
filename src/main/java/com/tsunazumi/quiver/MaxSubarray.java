@@ -10,16 +10,17 @@ public class MaxSubarray {
 
   }
   static int maxSubArray(int[] nums) {
-    int slidingWindowMax = 0;
-    int maxSubArray = nums[0];
+    int max = nums[0];
+    int slidingWindow = 0;
+
     for (int i = 0; i < nums.length; i++) {
       // check if the current number is greater than itself plus the current max.  If it is
       // then we restart the sliding window and make the current number our new max
-      slidingWindowMax = Math.max(nums[i], nums[i] + slidingWindowMax);
+      slidingWindow = Math.max(nums[i], nums[i] + slidingWindow);
       // keep track of the highest ever seen subarray sum
       // by checking if the current sliding window is greater than the maxSubArray
-      maxSubArray = Math.max(slidingWindowMax, maxSubArray);
+      max = Math.max(slidingWindow, max);
     }
-    return maxSubArray;
+    return max;
   }
 }
