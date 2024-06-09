@@ -31,7 +31,7 @@ public class MergeSortedArrays {
     }
 
     while (j < ar2.length) {
-      result[k++] = ar2[k++];
+      result[k++] = ar2[j++];
     }
 
     return result;
