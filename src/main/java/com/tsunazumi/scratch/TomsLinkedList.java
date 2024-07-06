@@ -14,6 +14,7 @@ public class TomsLinkedList {
 
   public void append(ListNode node) {
     tail.next = node;
+    node.prev = tail;
     tail = node;
   }
 
@@ -31,10 +32,11 @@ public class TomsLinkedList {
     int idx = 0;
     ListNode current = head;
     ListNode prev = null;
-    while(current.next != null) {
+    while(current != null) {
       if (idx == index) {
         //insert it
         prev.next = node;
+        node.prev = prev;
         node.next = current;
         break;
       }
@@ -42,7 +44,6 @@ public class TomsLinkedList {
       prev = current;
       current = current.next;
     }
-    System.out.println(current.val);
   }
 
   public void remove(int index) {
@@ -53,12 +54,25 @@ public class TomsLinkedList {
       if (idx == index) {
         //remove it
         prev.next = current.next;
+        current.prev = prev;
         break;
       }
       idx++;
       prev = current;
       current = current.next;
     }
+  }
+
+  public void reverse() {
+    ListNode prev = null;
+    ListNode current = head;
+    while (current != null) {
+      ListNode next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    head = prev;
   }
 
   public void printList() {
@@ -68,7 +82,7 @@ public class TomsLinkedList {
       list.append(current.val).append(", ");
       current = current.next;
     }
-    System.out.println(list);
+    System.out.println(list.substring(0, list.length()-2));
 
   }
 
@@ -79,8 +93,12 @@ public class TomsLinkedList {
     TomsLinkedList tll = new TomsLinkedList(head);
     tll.append(foo);
     tll.append(bar);
-    tll.insert(1, new ListNode(10));
+    tll.printList();
+    tll.insert(2, new ListNode(10));
+    tll.printList();
     tll.remove(1);
+    tll.printList();
+    tll.reverse();
     tll.printList();
   }
 
