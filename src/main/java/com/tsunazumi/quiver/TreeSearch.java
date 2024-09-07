@@ -27,14 +27,16 @@ public class TreeSearch {
     nine.left = five;
     nine.right = eight;
 
-//    System.out.println(maxDepth(three));
+//    System.out.println(depthFirstSearch(three, 4));
+//    System.out.println(breadthFirstSearch(three, 21));
 
-//    List<Integer> list = new ArrayList<>();
+    List<Integer> list = new ArrayList<>();
 //    depthFirstWalk(three, list);
-//    list.forEach(System.out::println);
+    list.forEach(System.out::println);
 
-//    System.out.println(depthFirstSearch(three, 9));
-    System.out.println(levelOrder(three));
+//    System.out.println(maxDepth(three));
+    System.out.println(isTreeBalanced(three));
+
   }
 
   public static int maxDepth(TreeNode root) {
@@ -49,13 +51,43 @@ public class TreeSearch {
     return right + 1;
   }
 
+  public static boolean isTreeBalanced(TreeNode root) {
+    return checkHeight(root) != -1;
+  }
+
+  private static int checkHeight(TreeNode node) {
+    if (node == null) {
+      return 0;  // A null node has height 0, so it's balanced
+    }
+
+    // Recursively get the height of the left subtree
+    int leftHeight = checkHeight(node.left);
+    if (leftHeight == -1) {
+      return -1;  // Left subtree is not balanced
+    }
+
+    // Recursively get the height of the right subtree
+    int rightHeight = checkHeight(node.right);
+    if (rightHeight == -1) {
+      return -1;  // Right subtree is not balanced
+    }
+
+    // If the difference in heights is greater than 1, the tree is not balanced
+    if (Math.abs(leftHeight - rightHeight) > 1) {
+      return -1;  // Tree is not balanced
+    }
+
+    // Return the height of the current node
+    return Math.max(leftHeight, rightHeight) + 1;
+  }
+
   public static void depthFirstWalk(TreeNode root, List<Integer> list) {
     if (root == null) {
       return;
     }
+    list.add(root.value);
     depthFirstWalk(root.left, list);
     depthFirstWalk(root.right, list);
-    list.add(root.value);
   }
 
   public static boolean depthFirstSearch(TreeNode root, int needle) {
@@ -96,34 +128,6 @@ public class TreeSearch {
     }
     return false;
 
-  }
-
-  public static List<List<Integer>> levelOrder(TreeNode root) {
-    List<List<Integer>> result = new ArrayList<>();
-    if (root == null) {
-      return result;
-    }
-
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.add(root);
-
-    while (!queue.isEmpty()) {
-      int qlength = queue.size();
-      List<Integer> level = new ArrayList<>();
-
-      for (int i = 0; i < qlength; i++) {
-        TreeNode node = queue.poll();
-        level.add(node.value);
-        if (node.left != null) {
-          queue.add(node.left);
-        }
-        if (node.right != null) {
-          queue.add(node.right);
-        }
-      }
-      result.add(level);
-    }
-    return result;
   }
 
 }
