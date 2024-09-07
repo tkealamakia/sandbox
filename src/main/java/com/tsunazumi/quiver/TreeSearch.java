@@ -11,31 +11,48 @@ import java.util.Queue;
 
 public class TreeSearch {
   public static void main(String[]args){
-    TreeNode fifteen = new TreeNode(15);
-    TreeNode seven = new TreeNode(7);
-    TreeNode eight = new TreeNode(8);
+
+    // Balanced
+//    TreeNode fifteen = new TreeNode(15);
+//    TreeNode seven = new TreeNode(7);
+//    TreeNode eight = new TreeNode(8);
+//    TreeNode five = new TreeNode(5);
+//
+//    TreeNode twenty = new TreeNode(20);
+//    TreeNode nine = new TreeNode(9);
+//
+//    TreeNode root = new TreeNode(3);
+//    root.left = nine;
+//    root.right = twenty;
+//    twenty.left = seven;
+//    twenty.right = fifteen;
+//    nine.left = five;
+//    nine.right = eight;
+
+    // Un-Balanced
+    TreeNode six = new TreeNode(6);
+    TreeNode four = new TreeNode(4);
     TreeNode five = new TreeNode(5);
-
-    TreeNode twenty = new TreeNode(20);
-    TreeNode nine = new TreeNode(9);
-
+    TreeNode two = new TreeNode(2);
     TreeNode three = new TreeNode(3);
-    three.left = nine;
-    three.right = twenty;
-    twenty.left = seven;
-    twenty.right = fifteen;
-    nine.left = five;
-    nine.right = eight;
+
+    TreeNode root = new TreeNode(1);
+
+    four.left = six;
+    two.left = four;
+    two.right = five;
+    root.left = two;
+    root.right = three;
 
 //    System.out.println(depthFirstSearch(three, 4));
 //    System.out.println(breadthFirstSearch(three, 21));
 
-    List<Integer> list = new ArrayList<>();
+//    List<Integer> list = new ArrayList<>();
 //    depthFirstWalk(three, list);
-    list.forEach(System.out::println);
+//    list.forEach(System.out::println);
 
 //    System.out.println(maxDepth(three));
-    System.out.println(isTreeBalanced(three));
+    System.out.println(isTreeBalanced(root));
 
   }
 
