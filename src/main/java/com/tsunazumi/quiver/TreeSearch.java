@@ -3,57 +3,56 @@ package com.tsunazumi.quiver;
 import com.sun.source.tree.Tree;
 import com.tsunazumi.dsa.structures.TreeNode;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 
 public class TreeSearch {
   public static void main(String[]args){
 
     // Balanced
-//    TreeNode fifteen = new TreeNode(15);
-//    TreeNode seven = new TreeNode(7);
-//    TreeNode eight = new TreeNode(8);
-//    TreeNode five = new TreeNode(5);
-//
-//    TreeNode twenty = new TreeNode(20);
-//    TreeNode nine = new TreeNode(9);
-//
-//    TreeNode root = new TreeNode(3);
-//    root.left = nine;
-//    root.right = twenty;
-//    twenty.left = seven;
-//    twenty.right = fifteen;
-//    nine.left = five;
-//    nine.right = eight;
+    TreeNode fifteen = new TreeNode(15);
+    TreeNode seven = new TreeNode(7);
+    TreeNode eight = new TreeNode(8);
+    TreeNode five = new TreeNode(5);
+
+    TreeNode twenty = new TreeNode(20);
+    TreeNode nine = new TreeNode(9);
+
+    TreeNode root = new TreeNode(3);
+    root.left = nine;
+    root.right = twenty;
+    twenty.left = seven;
+    twenty.right = fifteen;
+    nine.left = five;
+    nine.right = eight;
 
     // Un-Balanced
-    TreeNode six = new TreeNode(6);
-    TreeNode four = new TreeNode(4);
-    TreeNode five = new TreeNode(5);
-    TreeNode two = new TreeNode(2);
-    TreeNode three = new TreeNode(3);
+//    TreeNode six = new TreeNode(6);
+//    TreeNode four = new TreeNode(4);
+//    TreeNode five = new TreeNode(5);
+//    TreeNode two = new TreeNode(2);
+//    TreeNode three = new TreeNode(3);
+//
+//    TreeNode root = new TreeNode(1);
+//
+//    four.left = six;
+//    two.left = four;
+//    two.right = five;
+//    root.left = two;
+//    root.right = three;
 
-    TreeNode root = new TreeNode(1);
-
-    four.left = six;
-    two.left = four;
-    two.right = five;
-    root.left = two;
-    root.right = three;
-
-//    System.out.println(depthFirstSearch(three, 4));
-//    System.out.println(breadthFirstSearch(three, 21));
+//    System.out.println(depthFirstSearch(root, 4));
+//    System.out.println(breadthFirstSearch(root, 21));
 
 //    List<Integer> list = new ArrayList<>();
 //    depthFirstWalk(three, list);
 //    list.forEach(System.out::println);
 
 //    System.out.println(maxDepth(three));
-    System.out.println(isTreeBalanced(root));
+//    System.out.println(isTreeBalanced(root));
 
+//    findLowestCommonAncestor(root, 5, 15);
+    System.out.println(findLowestCommonAncestor(root, 7, 15));
   }
 
   public static int maxDepth(TreeNode root) {
@@ -146,5 +145,63 @@ public class TreeSearch {
     return false;
 
   }
+  public static TreeNode findLowestCommonAncestor(TreeNode root, int a, int b) {
+    if (root == null) {
+      return null;
+    }
+
+    // If we find either a or b, return this node (base case)
+    if (root.value == a || root.value == b) {
+      return root;
+    }
+
+    // Traverse left and right subtrees
+    TreeNode left = findLowestCommonAncestor(root.left, a, b);
+    TreeNode right = findLowestCommonAncestor(root.right, a, b);
+
+    // If both left and right are non-null, we've found the LCA
+    if (left != null && right != null) {
+      return root;
+    }
+
+    // If only one side is non-null, return the non-null value
+    return left != null ? left : right;
+  }
+
+  public static int findLowestCommonAncestor2(TreeNode root, int a, int b) {
+    if (root == null) {
+      return 0;
+    }
+    // get a set of all the nodes visited to get a
+    List<Integer> aList = new ArrayList<>();
+    depthFirstSearchWalk(root, a, aList);
+    // get a set of all the nodes visited to get b
+    List<Integer> bList = new ArrayList<>();
+    depthFirstSearchWalk(root, b, bList);
+
+    aList.retainAll(bList);
+    return Collections.max(aList);
+
+  }
+  public static boolean depthFirstSearchWalk(TreeNode root, int needle, List<Integer> col) {
+    if (root == null) {
+      return false;
+    }
+
+    if (root.value == needle) {
+      return true;  // Found the value
+    }
+
+    if (depthFirstSearchWalk(root.left, needle, col)) {
+      col.add(root.value);
+      return true;
+    }
+    if (depthFirstSearchWalk(root.right, needle, col)) {
+      col.add(root.value);
+      return true;
+    }
+    return false;
+  }
+
 
 }
