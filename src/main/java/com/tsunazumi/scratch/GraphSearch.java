@@ -12,7 +12,7 @@ public class GraphSearch {
     graph.put(4, Arrays.asList(2));
     graph.put(5, Arrays.asList(2));
     graph.put(6, Arrays.asList(3));
-    List<Integer> result = dfs(graph, 6);
+    List<Integer> result = bfs(graph, 6);
     for (int i : result) {
       System.out.println(i);
     }
@@ -23,6 +23,10 @@ public class GraphSearch {
   }
 
   private static void dfsHelper(Map<Integer, List<Integer>> graph, int node, List<Integer> visited, Set<Integer> seen) {
+  }
+
+  public static List<Integer> bfs(Map<Integer, List<Integer>> graph, int start) {
+    return null;
   }
 
 }

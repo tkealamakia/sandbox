@@ -34,4 +34,21 @@ public class GraphSearch {
     }
   }
 
+  public static List<Integer> bfs(Map<Integer, List<Integer>> graph, int start) {
+    Set<Integer> seen = new HashSet<>();
+    List<Integer> visited = new ArrayList<>();
+    Queue<Integer> queue = new LinkedList<>();
+    queue.add(start);
+
+    while (!queue.isEmpty()) {
+      int node = queue.poll();
+      if (!seen.contains(node)) {
+        seen.add(node);
+        visited.add(node);
+        queue.addAll(graph.getOrDefault(node, Collections.emptyList()));
+      }
+    }
+    return visited;
+  }
+
 }
