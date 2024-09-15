@@ -1,4 +1,4 @@
-package com.tsunazumi.quiver;
+package com.tsunazumi.scratch;
 
 import java.util.*;
 
@@ -19,19 +19,10 @@ public class GraphSearch {
   }
 
   public static List<Integer> dfs(Map<Integer, List<Integer>> graph, int start) {
-    List<Integer> visited = new ArrayList<>();
-    Set<Integer> seen = new HashSet<>();
-    dfsHelper(graph, start, visited, seen);
-    return visited;
+    return null;
   }
 
   private static void dfsHelper(Map<Integer, List<Integer>> graph, int node, List<Integer> visited, Set<Integer> seen) {
-    if (seen.contains(node)) return;
-    seen.add(node);
-    visited.add(node);
-    for (int neighbor: graph.getOrDefault(node, Collections.emptyList())) {
-      dfsHelper(graph, neighbor, visited, seen);
-    }
   }
 
 }
