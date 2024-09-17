@@ -37,14 +37,4 @@ public class TwoSum {
     }
     return false;
   }
-
-  public static boolean isTwoSumMyWay(int[] nums, int sum) {
-    Set<Integer> set = Arrays.stream(nums).boxed().collect(Collectors.toSet());
-    for (int i : nums) {
-      if (set.contains(sum - i)) {
-        return true;
-      }
-    }
-    return false;
-  }
 }
