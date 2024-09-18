@@ -13,18 +13,14 @@ public class AreAnagrams {
 
   public static boolean areAnagrams(String str1, String str2) {
     Map<Character, Integer> map = new HashMap<>();
-    for (Character c : str1.toCharArray()) {
+    for (char c : str1.toCharArray()) {
       map.put(c, map.getOrDefault(c, 0) + 1);
     }
-    for (Character c : str2.toCharArray()) {
-      if (map.get(c) != null) {
-        if (map.get(c) == 1) {
-          map.remove(c);
-        } else {
-          map.put(c, map.get(c) - 1);
-        }
-      }
+    for (char c : str2.toCharArray()) {
+      map.put(c, map.getOrDefault(c, 0) - 1);
     }
-    return map.isEmpty();
+
+    int sum = map.values().stream().mapToInt(Integer::intValue).sum();
+    return sum == 0;
   }
 }
