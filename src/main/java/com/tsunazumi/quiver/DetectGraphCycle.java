@@ -16,13 +16,36 @@ public class DetectGraphCycle {
     graph.put(6, Arrays.asList(3, 5));  // Node 6 connected to 3 and 5 (cycle)
     graph.put(7, Arrays.asList(3));  // Node 7 connected to 3
 
-    boolean result = containsCycle(graph, 6);
+    boolean result = isCyclic(graph);
+    System.out.println(result);
   }
 
+  public static boolean isCyclic(Map<Integer, List<Integer>> graph) {
+    Set<Integer> visited = new HashSet<>();
 
-  // TODO finish
-  public static boolean containsCycle(Map<Integer, List<Integer>> graph, int start) {
+    // Check all nodes in case the graph is disconnected
+    for (int node : graph.keySet()) {
+      if (!visited.contains(node)) {
+        if (isCyclicUtil(node, -1, visited, graph)) {
+          return true;
+        }
+      }
+    }
     return false;
   }
 
+  public static boolean isCyclicUtil(int node, int parent, Set<Integer> visited, Map<Integer, List<Integer>> graph) {
+    visited.add(node);
+    for (int neighbor : graph.getOrDefault(node, new ArrayList<>())) {
+      if (!visited.contains(neighbor)) {
+        if (isCyclicUtil(neighbor, node, visited, graph)) {
+          return true;
+        }
+      } else if (neighbor != parent) {
+        return true;
+      }
+    }
+    return false;
+  }
 }
+
