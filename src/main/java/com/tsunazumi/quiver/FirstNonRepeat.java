@@ -16,13 +16,16 @@ public class FirstNonRepeat {
     for (Character c : str.toCharArray()) {
       // trap for expected pattern
       if (!current.startsWith(c.toString()) && current.length() == 2) {
+        // at a new pair
         current = c.toString();
         continue;
       }
       // trap for unexpected pattern
       if (!current.startsWith(c.toString()) && current.length() == 1) {
+        // found the non repeat
         return current;
       }
+      // accumulate
       current = current + c;
     }
     return null;

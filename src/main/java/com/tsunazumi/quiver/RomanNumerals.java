@@ -6,8 +6,8 @@ import java.util.Map;
 public class RomanNumerals {
 
   public static void main(String[] args) {
-    System.out.println(intToRoman(345));
-    System.out.println(romanToInt("CCCXLV"));
+    System.out.println(intToRoman(1982));
+    System.out.println(romanToInt("MCMLXXXII"));
 
   }
 

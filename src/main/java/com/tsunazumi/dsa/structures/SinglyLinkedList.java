@@ -1,5 +1,7 @@
 package com.tsunazumi.dsa.structures;
 
+import javax.xml.crypto.Data;
+
 public class SinglyLinkedList {
   public ListNode head;
   public ListNode tail;
@@ -11,6 +13,17 @@ public class SinglyLinkedList {
 
   public void insertNode(int nodeData) {
     ListNode node = new ListNode(nodeData);
+
+    if (this.head == null) {
+      this.head = node;
+    } else {
+      this.tail.next = node;
+    }
+
+    this.tail = node;
+  }
+
+  public void addNode(ListNode node) {
 
     if (this.head == null) {
       this.head = node;
