@@ -4,7 +4,6 @@ import com.tsunazumi.dsa.structures.ListNode;
 import com.tsunazumi.dsa.structures.SinglyLinkedList;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class DetectLinkedListCycle {
