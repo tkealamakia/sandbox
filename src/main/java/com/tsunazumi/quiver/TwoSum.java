@@ -33,6 +33,7 @@ public class TwoSum {
       if (set.contains(sum - i)) {
         return true;
       }
+      // Accumulate the numbers we have seen so we don't have to go over the list every time
       set.add(i);
     }
     return false;
