@@ -1,7 +1,7 @@
 package com.tsunazumi.quiver;
 
-import com.tsunazumi.dsa.structures.ListNode;
-import com.tsunazumi.dsa.structures.SinglyLinkedList;
+import com.tsunazumi.structures.ListNode;
+import com.tsunazumi.structures.SinglyLinkedList;
 
 import java.util.HashSet;
 import java.util.Set;

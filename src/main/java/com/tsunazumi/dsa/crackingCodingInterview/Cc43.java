@@ -3,7 +3,7 @@ package com.tsunazumi.dsa.crackingCodingInterview;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import com.tsunazumi.dsa.structures.TreeNode;
+import com.tsunazumi.structures.TreeNode;
 
 public class Cc43 {
 

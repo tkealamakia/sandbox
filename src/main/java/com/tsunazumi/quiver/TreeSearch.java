@@ -1,7 +1,6 @@
 package com.tsunazumi.quiver;
 
-import com.sun.source.tree.Tree;
-import com.tsunazumi.dsa.structures.TreeNode;
+import com.tsunazumi.structures.TreeNode;
 
 import java.util.*;
 

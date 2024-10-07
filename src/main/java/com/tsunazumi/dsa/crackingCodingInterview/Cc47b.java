@@ -1,7 +1,7 @@
 package com.tsunazumi.dsa.crackingCodingInterview;
 
-import com.tsunazumi.dsa.structures.Graph2;
-import com.tsunazumi.dsa.structures.Project;
+import com.tsunazumi.structures.Graph2;
+import com.tsunazumi.structures.Project;
 
 import java.util.ArrayList;
 import java.util.Stack;

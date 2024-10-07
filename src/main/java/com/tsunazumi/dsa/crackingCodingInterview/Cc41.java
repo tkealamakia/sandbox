@@ -1,8 +1,8 @@
 package com.tsunazumi.dsa.crackingCodingInterview;
 
-import com.tsunazumi.dsa.structures.Graph;
-import com.tsunazumi.dsa.structures.GraphNode;
-import com.tsunazumi.dsa.structures.State;
+import com.tsunazumi.structures.Graph;
+import com.tsunazumi.structures.GraphNode;
+import com.tsunazumi.structures.State;
 
 import java.util.LinkedList;
 

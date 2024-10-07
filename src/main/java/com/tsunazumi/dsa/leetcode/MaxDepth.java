@@ -1,6 +1,6 @@
 package com.tsunazumi.dsa.leetcode;
 
-import com.tsunazumi.dsa.structures.TreeNode;
+import com.tsunazumi.structures.TreeNode;
 
 
 public class MaxDepth {

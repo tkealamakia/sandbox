@@ -1,6 +1,6 @@
 package com.tsunazumi.dsa.leetcode;
 
-import com.tsunazumi.dsa.structures.ListNode;
+import com.tsunazumi.structures.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

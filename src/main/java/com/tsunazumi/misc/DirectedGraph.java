@@ -1,6 +1,6 @@
 package com.tsunazumi.misc;
 
-import com.tsunazumi.dsa.structures.GraphNode;
+import com.tsunazumi.structures.GraphNode;
 
 import java.util.*;
 

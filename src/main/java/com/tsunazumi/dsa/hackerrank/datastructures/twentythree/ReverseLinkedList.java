@@ -1,7 +1,7 @@
 package com.tsunazumi.dsa.hackerrank.datastructures.twentythree;
 
-import com.tsunazumi.dsa.structures.SinglyLinkedList;
-import com.tsunazumi.dsa.structures.ListNode;
+import com.tsunazumi.structures.SinglyLinkedList;
+import com.tsunazumi.structures.ListNode;
 
 import java.util.Stack;
 

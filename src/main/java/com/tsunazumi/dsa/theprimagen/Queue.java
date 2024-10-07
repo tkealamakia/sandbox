@@ -1,7 +1,7 @@
 package com.tsunazumi.dsa.theprimagen;
 
 
-import com.tsunazumi.dsa.structures.Node;
+import com.tsunazumi.structures.Node;
 
 public class Queue {
   private int count = 0;

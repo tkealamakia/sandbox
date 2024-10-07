@@ -1,6 +1,6 @@
 package com.tsunazumi.quiver;
 
-import com.tsunazumi.dsa.structures.ListNode;
+import com.tsunazumi.structures.ListNode;
 
 public class MergeSortedLists {
   public static void main(String[] args) {
@@ -8,6 +8,8 @@ public class MergeSortedLists {
     ListNode list7 = new ListNode(7);
     ListNode list9 = new ListNode(9);
     ListNode list31 = new ListNode(31);
+    ListNode list32 = new ListNode(32);
+    list31.next = list32;
     list9.next = list31;
     list7.next= list9;
     list1.next = list7;

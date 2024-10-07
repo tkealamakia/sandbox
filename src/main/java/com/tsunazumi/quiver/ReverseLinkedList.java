@@ -1,7 +1,7 @@
 package com.tsunazumi.quiver;
 
-import com.tsunazumi.dsa.structures.SinglyLinkedList;
-import com.tsunazumi.dsa.structures.ListNode;
+import com.tsunazumi.structures.SinglyLinkedList;
+import com.tsunazumi.structures.ListNode;
 
 public class ReverseLinkedList {
   public static void main(String[] args) {

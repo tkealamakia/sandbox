@@ -1,7 +1,7 @@
 package com.tsunazumi.dsa.crackingCodingInterview;
 
-import com.tsunazumi.dsa.structures.Result;
-import com.tsunazumi.dsa.structures.TreeNode;
+import com.tsunazumi.structures.Result;
+import com.tsunazumi.structures.TreeNode;
 
 public class Cc48c {
 

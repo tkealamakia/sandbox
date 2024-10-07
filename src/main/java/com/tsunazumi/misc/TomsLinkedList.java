@@ -1,6 +1,6 @@
 package com.tsunazumi.misc;
 
-import com.tsunazumi.dsa.structures.ListNode;
+import com.tsunazumi.structures.ListNode;
 
 public class TomsLinkedList {
   ListNode head = null;
