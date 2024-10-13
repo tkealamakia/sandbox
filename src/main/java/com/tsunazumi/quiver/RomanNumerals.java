@@ -1,5 +1,6 @@
 package com.tsunazumi.quiver;
 
+import javax.print.attribute.standard.MediaSize;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,7 +37,14 @@ public class RomanNumerals {
     map.put('M', 1000);
 
     int result = 0;
-    for (int i = 0; i <s.length(); i++) {
+    for (int i = 0; i < s.length(); i++) {
+      // if the current character is greater than the last one
+      // we have a prefixed numeral that needs to now be subtracted
+      // MCM: 1000 + 100 = 1100, then another 1000.
+      // Instead of adding 1000 to 1100, we instead take the last number, 100
+      // multiply it by 2 (200 because we remove the addition from the last item).
+      // Then take the current number and subtract that result (1000 - 200 = 800)
+      // Then add that to the result (1100 + 800)
       if (i > 0 && map.get(s.charAt(i)) > map.get(s.charAt(i - 1))) {
         result += map.get(s.charAt(i)) - 2 * map.get(s.charAt(i - 1));
       } else {
