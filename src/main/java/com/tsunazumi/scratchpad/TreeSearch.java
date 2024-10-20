@@ -2,7 +2,10 @@ package com.tsunazumi.scratchpad;
 
 import com.tsunazumi.structures.TreeNode;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 
 public class TreeSearch {
@@ -15,23 +18,38 @@ public class TreeSearch {
     TreeNode twenty = new TreeNode(20);
     TreeNode nine = new TreeNode(9);
 
-    TreeNode three = new TreeNode(3);
-    three.left = nine;
-    three.right = twenty;
+    TreeNode root = new TreeNode(3);
+    root.left = nine;
+    root.right = twenty;
     twenty.left = seven;
     twenty.right = fifteen;
     nine.left = five;
     nine.right = eight;
 
-    System.out.println(depthFirstSearch(three, 4));
-//    System.out.println(breadthFirstSearch(three, 21));
+    // Un-Balanced
+//    TreeNode six = new TreeNode(6);
+//    TreeNode four = new TreeNode(4);
+//    TreeNode five = new TreeNode(5);
+//    TreeNode two = new TreeNode(2);
+//    TreeNode three = new TreeNode(3);
+//
+//    TreeNode root = new TreeNode(1);
+//
+//    four.left = six;
+//    two.left = four;
+//    two.right = five;
+//    root.left = two;
+//    root.right = three;
+
+//    System.out.println(depthFirstSearch(three, 5));
+//    System.out.println(breadthFirstSearch(three, 20));
+
+//    System.out.println(maxDepth(three));
+//    System.out.println(isTreeBalanced(root));
 
 //    List<Integer> list = new ArrayList<>();
 //    depthFirstWalk(three, list);
 //    list.forEach(System.out::println);
-
-//    System.out.println(maxDepth(three));
-//    System.out.println(isTreeBalanced(three));
 
   }
 
@@ -53,7 +71,6 @@ public class TreeSearch {
   public static boolean depthFirstSearch(TreeNode root, int needle) {
     return false;
   }
-
 
   public static boolean breadthFirstSearch(TreeNode root, int needle) {
     return false;
