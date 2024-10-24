@@ -1,5 +1,9 @@
 package com.tsunazumi.scratchpad;
 
+import java.util.*;
+import java.util.stream.Collectors;
+
+// make an array out of only common numbers between the two
 public class TwoArrayIntersection {
 
   public static void main(String[] args) {

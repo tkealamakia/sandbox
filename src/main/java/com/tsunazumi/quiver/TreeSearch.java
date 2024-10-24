@@ -48,10 +48,10 @@ public class TreeSearch {
 //    list.forEach(System.out::println);
 
 //    System.out.println(maxDepth(three));
-//    System.out.println(isTreeBalanced(root));
+    System.out.println(isTreeBalanced(root));
 
 //    findLowestCommonAncestor(root, 5, 15);
-    System.out.println(findLowestCommonAncestor(root, 7, 15));
+//    System.out.println(findLowestCommonAncestor(root, 7, 15));
   }
 
   public static int maxDepth(TreeNode root) {
