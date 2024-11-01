@@ -1,7 +1,7 @@
 package com.tsunazumi.quiver;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AreAnagrams {
   public static void main(String[] args) {
@@ -12,15 +12,15 @@ public class AreAnagrams {
   }
 
   public static boolean areAnagrams(String str1, String str2) {
-    Map<Character, Integer> map = new HashMap<>();
-    for (char c : str1.toCharArray()) {
-      map.put(c, map.getOrDefault(c, 0) + 1);
-    }
-    for (char c : str2.toCharArray()) {
-      map.put(c, map.getOrDefault(c, 0) - 1);
+    List<Character> list = new ArrayList<>();
+    for (Character c : str1.toCharArray()) {
+      list.add(c);
     }
 
-    int sum = map.values().stream().mapToInt(Integer::intValue).sum();
-    return sum == 0;
+    for (Character c: str2.toCharArray()) {
+      list.remove(c);
+    }
+
+    return list.isEmpty();
   }
 }
