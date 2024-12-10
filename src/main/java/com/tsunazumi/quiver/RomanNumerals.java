@@ -1,6 +1,5 @@
 package com.tsunazumi.quiver;
 
-import javax.print.attribute.standard.MediaSize;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,6 +8,7 @@ public class RomanNumerals {
   public static void main(String[] args) {
     System.out.println(intToRoman(1982));
     System.out.println(romanToInt("MCMLXXXII"));
+    System.out.println(romanToInt("MCMLXXI"));
 
   }
 
@@ -18,9 +18,16 @@ public class RomanNumerals {
     String[] hundreds = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
     String[] thousands = {"", "M", "MM", "MMM"};
 
+    // Mod of 10 will give the last position of the number
+    // 1982 % 10 = 2
     String unitPos = units[num % 10];
+    // Get the 10s position, but then only the first number of that
+    // 1982 % 100 = 82. 82/10 = 8
     String tenPos = tens[(num % 100) / 10];
+    // Get the 100s position, but then only the first number of that
+    // 1982 % 1000 = 982. 982/100 = 9
     String hundredPos = hundreds[(num % 1000) / 100];
+    // 1982 / 1000 = 1
     String thousandPos = thousands[num / 1000];
 
     return thousandPos + hundredPos + tenPos + unitPos;

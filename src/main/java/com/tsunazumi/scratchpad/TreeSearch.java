@@ -41,14 +41,14 @@ public class TreeSearch {
 //    root.left = two;
 //    root.right = three;
 
-//    System.out.println(depthFirstSearch(three, 5));
-//    System.out.println(breadthFirstSearch(three, 20));
+//    System.out.println(depthFirstSearch(root, 5));
+//    System.out.println(breadthFirstSearch(root, 20));
 
-//    System.out.println(maxDepth(three));
+//    System.out.println(maxDepth(root));
 //    System.out.println(isTreeBalanced(root));
 
 //    List<Integer> list = new ArrayList<>();
-//    depthFirstWalk(three, list);
+//    depthFirstWalk(root, list);
 //    list.forEach(System.out::println);
 
   }
