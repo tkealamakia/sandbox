@@ -9,8 +9,11 @@ public class FindMissingNumber {
   }
 
   public static int findMissingNumber(int[] nums) {
+    // Get the length that it should be if adding the missing number
     int n = nums.length + 1;
-    int expectedSum = n * (n + 1) / 2;
+    // magic formula
+    int expectedSum = (n * (n + 1)) / 2;
+
     int actualSum = 0;
     for (int num : nums) {
       actualSum += num;
