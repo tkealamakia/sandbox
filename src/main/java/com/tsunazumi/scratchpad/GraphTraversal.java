@@ -2,7 +2,7 @@ package com.tsunazumi.scratchpad;
 
 import java.util.*;
 
-public class GraphSearch {
+public class GraphTraversal {
 
   public static void main(String[] args) {
     Map<Integer, List<Integer>> graph = new HashMap<>();
@@ -16,7 +16,7 @@ public class GraphSearch {
     graph.put(6, Arrays.asList(3));  // Node 6 connected to 3
     graph.put(7, Arrays.asList(3));  // Node 7 connected to 3
 
-    List<Integer> result = bfs(graph, 6);
+    List<Integer> result = dfs(graph, 6);
     for (int i : result) {
       System.out.println(i);
     }
@@ -26,7 +26,7 @@ public class GraphSearch {
     return null;
   }
 
-  private static void dfsHelper(Map<Integer, List<Integer>> graph, int node, List<Integer> visited, Set<Integer> seen) {
+  private static void dfsHelper(Map<Integer, List<Integer>> graph, int node, List<Integer> traversal, Set<Integer> seen) {
   }
 
   public static List<Integer> bfs(Map<Integer, List<Integer>> graph, int start) {

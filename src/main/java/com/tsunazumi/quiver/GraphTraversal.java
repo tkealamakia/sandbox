@@ -2,7 +2,7 @@ package com.tsunazumi.quiver;
 
 import java.util.*;
 
-public class GraphSearch {
+public class GraphTraversal {
 
   public static void main(String[] args) {
 
@@ -24,18 +24,18 @@ public class GraphSearch {
   }
 
   public static List<Integer> dfs(Map<Integer, List<Integer>> graph, int start) {
-    List<Integer> visited = new ArrayList<>();
+    List<Integer> traversal = new ArrayList<>();
     Set<Integer> seen = new HashSet<>();
-    dfsHelper(graph, start, visited, seen);
-    return visited;
+    dfsHelper(graph, start, traversal, seen);
+    return traversal;
   }
 
-  private static void dfsHelper(Map<Integer, List<Integer>> graph, int node, List<Integer> visited, Set<Integer> seen) {
+  private static void dfsHelper(Map<Integer, List<Integer>> graph, int node, List<Integer> traversal, Set<Integer> seen) {
     if (seen.contains(node)) return;
     seen.add(node);
-    visited.add(node);
+    traversal.add(node);
     for (int neighbor: graph.getOrDefault(node, Collections.emptyList())) {
-      dfsHelper(graph, neighbor, visited, seen);
+      dfsHelper(graph, neighbor, traversal, seen);
     }
   }
 
