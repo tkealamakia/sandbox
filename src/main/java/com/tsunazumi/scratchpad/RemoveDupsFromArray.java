@@ -1,15 +1,17 @@
 package com.tsunazumi.scratchpad;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class RemoveDupsFromArray {
   public static void main(String[] args) {
     int[] array = {1,2,3,4,1,2,4};
-    int[] result = removeDups(array);
-    for (Integer i : result) {
-      System.out.println(i);
-    }
+    Integer[] result = removeDups(array);
+    Arrays.stream(result).forEach(System.out::println);
   }
 
-  private static int[] removeDups(int[] array) {
+  private static Integer[] removeDups(int[] array) {
     return null;
   }
 }
