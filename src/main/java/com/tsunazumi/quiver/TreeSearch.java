@@ -47,8 +47,8 @@ public class TreeSearch {
 //    depthFirstWalk(three, list);
 //    list.forEach(System.out::println);
 
-//    System.out.println(maxDepth(three));
-    System.out.println(isTreeBalanced(root));
+    System.out.println(maxDepth(root));
+//    System.out.println(isTreeBalanced(root));
 
 //    findLowestCommonAncestor(root, 5, 15);
 //    System.out.println(findLowestCommonAncestor(root, 7, 15));
@@ -58,12 +58,8 @@ public class TreeSearch {
     if (root == null) {
       return 0;
     }
-    int left = maxDepth(root.left);
-    int right = maxDepth(root.right);
-    if (left > right) {
-      return left + 1;
-    }
-    return right + 1;
+
+    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
   }
 
   public static boolean isTreeBalanced(TreeNode root) {

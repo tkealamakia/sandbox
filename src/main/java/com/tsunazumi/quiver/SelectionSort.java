@@ -8,18 +8,20 @@ public class SelectionSort {
 
     // Outer loop keeps the sorted partition
     for (int i = 0; i < nums.length - 1; i++) {
-      int minIndex = i;
-      // Loop through the full unsorted partition to find the min index
+      // Start with assuming the first item in the array is the min
+      int minValueIndex = i;
+      // Loop through the full unsorted partition to find the min value index
       for (int j = i + 1; j < nums.length; j++) {
-        if (nums[j] < nums[minIndex]) {
-          minIndex = j;
+        if (nums[j] < nums[minValueIndex]) {
+          minValueIndex = j;
         }
       }
       // Swap value in the min index into the sorted partition
-      if (minIndex != i) {
+      // ony if the min index is different than i
+      if (minValueIndex != i) {
         int temp = nums[i];
-        nums[i] = nums[minIndex];
-        nums[minIndex] = temp;
+        nums[i] = nums[minValueIndex];
+        nums[minValueIndex] = temp;
       }
     }
 
