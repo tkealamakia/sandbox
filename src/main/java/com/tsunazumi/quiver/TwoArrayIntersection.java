@@ -1,7 +1,6 @@
 package com.tsunazumi.quiver;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TwoArrayIntersection {
 
@@ -9,28 +8,21 @@ public class TwoArrayIntersection {
     int[] nums1 = {4, 6, 7, 7, 3};
     int[] nums2 = {3, 7, 9, 8, 7};
     int[] result = findIntersection(nums1, nums2);
-    for (int i : result) {
-      System.out.println(i);
-    }
+    Arrays.stream(result).forEach(System.out::println);
   }
 
   private static int[] findIntersection(int[] nums1, int[] nums2) {
-    Map<Integer, Boolean> intersection = new HashMap<>();
+    Set<Integer> set1 = new HashSet<>();
     for (int i : nums1) {
-      if (!intersection.containsKey(i)) {
-        intersection.put(i, false);
-      }
+      set1.add(i);
     }
+    Set<Integer> set2 = new HashSet<>();
     for (int i : nums2) {
-      if (intersection.containsKey(i)) {
-        intersection.put(i, true);
+      if (set1.contains(i)) {
+        set2.add(i);
       }
     }
 
-    int[] result = intersection.keySet().stream()
-        .filter(v -> intersection.get(v))
-        .mapToInt(Integer::intValue).toArray();
-
-    return result;
+    return set2.stream().mapToInt(Integer::intValue).toArray();
   }
 }
