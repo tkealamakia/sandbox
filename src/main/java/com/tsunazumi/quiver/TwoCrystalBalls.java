@@ -8,7 +8,10 @@ public class TwoCrystalBalls {
   }
 
   public static int lowestFloor(boolean[] breaks) {
-    // find the jump
+    // find the jump using sqrt because we don't want to do
+    // linear (would be too slow)
+    // binary (would be too risky, and slow on the linear part)
+    // sqrt strikes a balance between the two
     int jump = (int) Math.floor(Math.sqrt(breaks.length));
     int i = jump;
     for (; i < breaks.length; i += jump) {
