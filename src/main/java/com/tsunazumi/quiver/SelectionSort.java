@@ -16,6 +16,7 @@ public class SelectionSort {
           minValueIndex = j;
         }
       }
+      // Now we are through the full un-partitioned search
       // Swap value in the min index into the sorted partition
       // ony if the min index is different than i
       if (minValueIndex != i) {
