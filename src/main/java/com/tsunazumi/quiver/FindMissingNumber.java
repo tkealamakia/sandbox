@@ -1,5 +1,7 @@
 package com.tsunazumi.quiver;
 
+import java.util.Arrays;
+
 // Find the missing number in an array of integers from 1 to n.
 public class FindMissingNumber {
   public static void main(String[] args) {
@@ -14,10 +16,7 @@ public class FindMissingNumber {
     // magic formula
     int expectedSum = (n * (n + 1)) / 2;
 
-    int actualSum = 0;
-    for (int num : nums) {
-      actualSum += num;
-    }
+    int actualSum = Arrays.stream(nums).sum();
 
     return expectedSum - actualSum;
 
