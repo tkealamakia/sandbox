@@ -41,22 +41,26 @@ public class Dijkstra {
     Queue<DNode> unsettledNodes = new PriorityQueue<>(Collections.singleton(source));
     // Loop through the queue (like breadth first search)
     while (!unsettledNodes.isEmpty()) {
-      DNode currentNode = unsettledNodes.poll();
+      DNode sourceNode = unsettledNodes.poll();
       // Loop through adjacent nodes
-      currentNode.getAdjacentNodes()
+      sourceNode.getAdjacentNodes()
           .entrySet().stream()
           .filter(entry -> !settledNodes.contains(entry.getKey()))
           .forEach(entry -> {
-            evaluateDistanceAndPath(entry.getKey(), entry.getValue(), currentNode);
+            evaluateDistanceAndPath(entry.getKey(), entry.getValue(), sourceNode);
+            // We haven't seen this node before so add it so we can explore it
             unsettledNodes.add(entry.getKey());
           });
-      settledNodes.add(currentNode);
+      settledNodes.add(sourceNode);
     }
   }
 
   private static void evaluateDistanceAndPath(DNode adjacentNode, Integer edgeWeight, DNode sourceNode) {
-    // Add source node distance to adjacent node weight
+    // sourceNode.getDistance() is the current known shortest distance
+    // Add sourceNode.getDistance() to the adjacent node weight
     Integer newDistance = sourceNode.getDistance() + edgeWeight;
+    // If adjacentNode's distance has not been set this is infinity
+    // otherwise we've visited this node before and have a non-infinite distance
     if (newDistance < adjacentNode.getDistance()) {
       // need to register the new distance if it's less
       adjacentNode.setDistance(newDistance);
