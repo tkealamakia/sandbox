@@ -17,11 +17,11 @@ public class FirstNonRepeat {
     for (Character c : str.toCharArray()) {
       map.put(c, map.getOrDefault(c,0) + 1);
     }
-    for (Character c : str.toCharArray()) {
-      if (map.get(c) == 1) {
-        return c.toString();
-      }
-    }
-    return "nothing found";
+
+    return map.entrySet().stream()
+        .filter(entry -> entry.getValue() == 1)
+        .map(entry -> entry.getKey().toString())
+        .findFirst()
+        .orElse("");
   }
 }
