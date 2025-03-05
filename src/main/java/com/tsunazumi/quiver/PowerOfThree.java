@@ -7,18 +7,19 @@ public class PowerOfThree {
   }
 
   static boolean isPowerOfThree(int i) {
-    // Divide by 3 repeatedly until the base case of 1
-    if (i == 0) {
+    // 0 and negative numbers cannot be powers of three
+    if (i <= 0) {
       return false;
     }
+    // Base case: If i is 1, it is a power of three (3^0)
     if (i == 1) {
       return true;
     }
-    if (i % 3 > 0) {
+    // If i is not divisible by 3, it's not a power of three
+    if (i % 3 != 0) {
       return false;
     }
     return isPowerOfThree(i / 3);
-
   }
 
 }
