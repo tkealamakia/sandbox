@@ -47,7 +47,7 @@ public class RomanNumerals {
     for (int i = 0; i < s.length(); i++) {
       // if the current character is greater than the last one
       // we have a prefixed numeral that needs to now be subtracted
-      // MCM: 1000 + 100 = 1100, then another 1000.
+      // MCM: MC:: 1000 + 100 = 1100, then M:: 1000.
       // Instead of adding 1000 to 1100, we instead take the last number, 100
       // multiply it by 2 (200 because we remove the addition from the last item).
       // Then take the current number and subtract that result (1000 - 200 = 800)
