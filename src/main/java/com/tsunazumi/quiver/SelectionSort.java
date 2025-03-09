@@ -7,6 +7,8 @@ public class SelectionSort {
     int[] nums = {22,4,8,-16,32};
 
     // Outer loop keeps the sorted partition
+    // doing minus 1 here because the last element will already be in place
+    // and this will save us one loop on the outer loop
     for (int i = 0; i < nums.length - 1; i++) {
       // Start with assuming the first item in the array is the min
       int minValueIndex = i;

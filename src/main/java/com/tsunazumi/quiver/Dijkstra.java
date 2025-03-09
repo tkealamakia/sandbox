@@ -64,7 +64,8 @@ public class Dijkstra {
     if (newDistance < adjacentNode.getDistance()) {
       // need to register the new distance if it's less
       adjacentNode.setDistance(newDistance);
-      // set the shortest path to the source node plus the source node's shortest path
+      // getShortestPath for B might look like this [A]
+      // So setting the shortest path from B (sourceNode) for C would be [A,B]
       adjacentNode.setShortestPath(
           Stream.concat(sourceNode.getShortestPath().stream(), Stream.of(sourceNode)).toList()
       );
