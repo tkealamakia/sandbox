@@ -1,4 +1,4 @@
-package com.tsunazumi.scratchpad;
+package com.tsunazumi.scratchpadez;
 
 import com.tsunazumi.interview.Palindrome;
 import org.junit.jupiter.api.Test;

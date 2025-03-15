@@ -2,10 +2,7 @@ package com.tsunazumi.scratchpad;
 
 import com.tsunazumi.structures.TreeNode;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 
 public class TreeSearch {

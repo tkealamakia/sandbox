@@ -1,7 +1,4 @@
-package com.tsunazumi.scratchpad;
-
-import java.util.HashSet;
-import java.util.Set;
+package com.tsunazumi.scratchpadez;
 
 // Are there two numbers that sum to the number passed in?
 public class TwoSum {

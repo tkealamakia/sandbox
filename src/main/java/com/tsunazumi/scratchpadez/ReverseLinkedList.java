@@ -1,4 +1,4 @@
-package com.tsunazumi.scratchpad;
+package com.tsunazumi.scratchpadez;
 
 import com.tsunazumi.structures.ListNode;
 import com.tsunazumi.structures.SinglyLinkedList;

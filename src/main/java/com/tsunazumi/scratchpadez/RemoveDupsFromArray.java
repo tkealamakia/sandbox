@@ -1,8 +1,6 @@
-package com.tsunazumi.scratchpad;
+package com.tsunazumi.scratchpadez;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class RemoveDupsFromArray {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.tsunazumi.scratchpad;
+package com.tsunazumi.scratchpadez;
 
 
 public class PowerOfThree {

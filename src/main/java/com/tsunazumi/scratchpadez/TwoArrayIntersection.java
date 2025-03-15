@@ -1,7 +1,4 @@
-package com.tsunazumi.scratchpad;
-
-import java.util.*;
-import java.util.stream.Collectors;
+package com.tsunazumi.scratchpadez;
 
 // make an array out of only common numbers between the two
 public class TwoArrayIntersection {

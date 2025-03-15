@@ -1,4 +1,4 @@
-package com.tsunazumi.scratchpad;
+package com.tsunazumi.scratchpadez;
 
 public class MergeSortedArrays {
   public static void main(String[] args) {
