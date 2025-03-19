@@ -17,18 +17,6 @@ public class DetectLinkedListCycle {
     System.out.println(detectCycleFloyd(list.head));
   }
 
-  public static boolean detectCycle(ListNode head) {
-    Set<ListNode> set = new HashSet<>();
-    while (head != null) {
-      if (set.contains(head)) {
-        return true;
-      }
-      set.add(head);
-      head = head.next;
-    }
-    return false;
-  }
-
   public static boolean detectCycleFloyd(ListNode head) {
     if (head == null || head.next == null) {
       return false;
