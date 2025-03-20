@@ -56,6 +56,7 @@ public class Dijkstra {
   }
 
   private static void evaluateDistanceAndPath(DNode adjacentNode, Integer edgeWeight, DNode sourceNode) {
+    // sourceNode really only the last connected node, not the origin node
     // sourceNode.getDistance() is the current known shortest distance
     // Add sourceNode.getDistance() to the adjacent node weight
     Integer newDistance = sourceNode.getDistance() + edgeWeight;
@@ -65,7 +66,9 @@ public class Dijkstra {
       // need to register the new distance if it's less
       adjacentNode.setDistance(newDistance);
       // getShortestPath for B might look like this [A]
-      // So setting the shortest path from B (sourceNode) for C would be [A,B]
+      // So setting the shortest path from B(sourceNode) for C (adjacentNode)
+      // would result in [A,B]
+      // Essentially we are taking the sourceNode's shortest path, and then appending itself to it
       adjacentNode.setShortestPath(
           Stream.concat(sourceNode.getShortestPath().stream(), Stream.of(sourceNode)).toList()
       );
