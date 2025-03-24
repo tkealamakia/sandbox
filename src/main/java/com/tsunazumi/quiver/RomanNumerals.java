@@ -43,6 +43,7 @@ public class RomanNumerals {
     map.put('D', 500);
     map.put('M', 1000);
 
+    char[] chars = s.toCharArray();
     int result = 0;
     for (int i = 0; i < s.length(); i++) {
       // if the current character is greater than the last one
@@ -52,10 +53,10 @@ public class RomanNumerals {
       // multiply it by 2 (200 because we remove the addition from the last item).
       // Then take the current number and subtract that result (1000 - 200 = 800)
       // Then add that to the result (1100 + 800)
-      if (i > 0 && map.get(s.charAt(i)) > map.get(s.charAt(i - 1))) {
-        result += map.get(s.charAt(i)) - 2 * map.get(s.charAt(i - 1));
+      if (i > 0 && map.get(chars[i]) > map.get(chars[i-1])) {
+        result += map.get(chars[i]) - map.get(chars[i-1]) * 2;
       } else {
-        result += map.get(s.charAt(i));
+        result += map.get(chars[i]);
       }
     }
     return result;
