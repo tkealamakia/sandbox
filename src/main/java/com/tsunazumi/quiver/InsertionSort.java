@@ -7,9 +7,9 @@ public class InsertionSort {
     int[] nums = {22,4,8,-16,32};
     // Loop through starting at second element
     for (int i = 1; i < nums.length; i++) {
-      // start at the i'th position and work backwards
-      // keep moving the i'th position number down toward the front
-      // as long as it's smaller than the one in front of it
+      // inner loop is responsible for taking the i'th element and
+      // moving it lower in the array as long as it's value is
+      // less than the value of the one before it)
       for (int j = i; j > 0 && nums[j] < nums[j-1]; j--) {
           int temp = nums[j];
           nums[j] = nums[j-1];
