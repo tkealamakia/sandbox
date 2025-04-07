@@ -16,12 +16,29 @@ public class AreAnagrams {
   public static boolean areAnagrams(String str1, String str2) {
     Map<Character, Integer> map = new HashMap<>();
     for (Character c : str1.toCharArray()) {
-      map.merge(c, 1, Integer::sum);
+      map.put(c, map.getOrDefault(c, 0) + 1);
     }
     for (Character c : str2.toCharArray()) {
-      map.merge(c, -1, Integer::sum);
+      if (map.get(c) != null) {
+        map.put(c, map.get(c) - 1);
+      }
     }
-    return map.values().stream().allMatch(count -> count == 0);
+
+    List<Integer> list = map.values().stream()
+        .filter(e -> e != 0)
+        .toList();
+    return list.size() == 0;
   }
+
+//  public static boolean areAnagrams(String str1, String str2) {
+//    Map<Character, Integer> map = new HashMap<>();
+//    for (Character c : str1.toCharArray()) {
+//      map.merge(c, 1, Integer::sum);
+//    }
+//    for (Character c : str2.toCharArray()) {
+//      map.merge(c, -1, Integer::sum);
+//    }
+//    return map.values().stream().allMatch(count -> count == 0);
+//  }
 
 }
