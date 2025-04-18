@@ -28,8 +28,9 @@ public class MergeSortedLists {
 
   }
   public static ListNode mergeSortedLists(ListNode list1, ListNode list2) {
-    ListNode dummy = new ListNode(0);
-    ListNode current = dummy;
+    // Create a placeholder so we can refer back to the beginning
+    ListNode placeholder = new ListNode(0);
+    ListNode current = placeholder;
 
     while (list1 != null && list2 != null) {
       if (list1.val <= list2.val) {
@@ -41,11 +42,14 @@ public class MergeSortedLists {
       }
       current = current.next;
     }
+    // At this point we just add the tail of what is left.
+    // No need to loop
     if (list1 != null) {
       current.next = list1;
     } else {
       current.next = list2;
     }
-    return dummy.next;
+    // Reach back to the beginning with our placeholder
+    return placeholder.next;
   }
 }
