@@ -129,13 +129,8 @@ public class TreeSearch {
         return true;
       }
 
-      if (current.left != null) {
-        queue.add(current.left);
-      }
-
-      if (current.right != null) {
-        queue.add(current.right);
-      }
+      queue.add(current.left);
+      queue.add(current.right);
     }
     return false;
 

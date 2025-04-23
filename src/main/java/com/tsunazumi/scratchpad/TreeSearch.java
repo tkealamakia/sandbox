@@ -48,6 +48,9 @@ public class TreeSearch {
 //    depthFirstWalk(root, list);
 //    list.forEach(System.out::println);
 
+//    findLowestCommonAncestor(root, 5, 15);
+//    System.out.println(findLowestCommonAncestor(root, 7, 15));
+
   }
 
   public static int maxDepth(TreeNode root) {
@@ -71,6 +74,10 @@ public class TreeSearch {
 
   public static boolean breadthFirstSearch(TreeNode root, int needle) {
     return false;
+  }
+
+  public static TreeNode findLowestCommonAncestor(TreeNode root, int a, int b) {
+    return null;
   }
 
 }
