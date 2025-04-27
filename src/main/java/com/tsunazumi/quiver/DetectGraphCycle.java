@@ -41,6 +41,9 @@ public class DetectGraphCycle {
         if (isCyclicUtil(neighbor, node, visited, graph)) {
           return true;
         }
+        // If you went from 1 -- 2 and then from 2 back to 1
+        // that isn't a cycle because you are traveling back the
+        // way you already came
       } else if (neighbor != parent) {
         return true;
       }
