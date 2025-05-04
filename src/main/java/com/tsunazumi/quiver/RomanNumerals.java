@@ -45,7 +45,7 @@ public class RomanNumerals {
 
     char[] chars = s.toCharArray();
     int result = 0;
-    for (int i = 0; i < s.length(); i++) {
+    for (int i = 0; i < chars.length; i++) {
       // if the current character is greater than the last one
       // we have a prefixed numeral that needs to now be subtracted
       // MCM: MC:: 1000 + 100 = 1100, then M:: 1000.
