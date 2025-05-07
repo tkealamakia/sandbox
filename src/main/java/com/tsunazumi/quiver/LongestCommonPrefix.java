@@ -13,10 +13,12 @@ public class LongestCommonPrefix {
       return "";
     }
 
+    // take the first item in the array as the test sample
     String common = strings[0];
+    // loop through the rest of the strings in the array
     for (int i = 1; i < strings.length; i++) {
-      // while current string does not contain the common string
-      // shorten it one character at a time and keep checking
+      // while the current string does not contain the common string
+      // shorten the common string by one character at a time and keep checking
       while (strings[i].indexOf(common) != 0) {
         // if the length is eventually 0 then we don't have anything in common
         if (common.length() == 0) {
@@ -24,7 +26,6 @@ public class LongestCommonPrefix {
         }
         // shorten it down by one char and move to the next check
         common = common.substring(0, common.length() - 1);
-
       }
     }
     return common;
