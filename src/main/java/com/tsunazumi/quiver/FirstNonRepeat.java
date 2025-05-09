@@ -1,8 +1,6 @@
 package com.tsunazumi.quiver;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class FirstNonRepeat {
   public static void main(String[] args) {
@@ -23,5 +21,19 @@ public class FirstNonRepeat {
         .map(entry -> entry.getKey().toString())
         .findFirst()
         .orElse("");
+  }
+
+  private static String firstNonRepeat2(String str) {
+    List<Character> list = new ArrayList<>();
+    char[] chars = str.toCharArray();
+    for (char c : chars) {
+      if (list.contains(c)) {
+        list.remove((Character)c);
+      } else {
+        list.add(c);
+      }
+    }
+
+    return list.get(0).toString();
   }
 }
