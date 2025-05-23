@@ -23,17 +23,4 @@ public class FirstNonRepeat {
         .orElse("");
   }
 
-  private static String firstNonRepeat2(String str) {
-    List<Character> list = new ArrayList<>();
-    char[] chars = str.toCharArray();
-    for (char c : chars) {
-      if (list.contains(c)) {
-        list.remove((Character)c);
-      } else {
-        list.add(c);
-      }
-    }
-
-    return list.get(0).toString();
-  }
 }
