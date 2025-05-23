@@ -14,31 +14,22 @@ public class AreAnagrams {
   }
 
   public static boolean areAnagrams(String str1, String str2) {
+    if (str1.length() != str2.length()) return false;
+
     Map<Character, Integer> map = new HashMap<>();
     for (Character c : str1.toCharArray()) {
       map.put(c, map.getOrDefault(c, 0) + 1);
     }
+
     for (Character c : str2.toCharArray()) {
-      if (map.get(c) != null) {
-        map.put(c, map.get(c) - 1);
+      if (!map.containsKey(c) || map.get(c) == 0) {
+        return false;
       }
+      map.put(c, map.get(c) - 1);
     }
 
-    List<Integer> list = map.values().stream()
-        .filter(e -> e != 0)
-        .toList();
-    return list.size() == 0;
-  }
+    return true;
 
-//  public static boolean areAnagrams(String str1, String str2) {
-//    Map<Character, Integer> map = new HashMap<>();
-//    for (Character c : str1.toCharArray()) {
-//      map.merge(c, 1, Integer::sum);
-//    }
-//    for (Character c : str2.toCharArray()) {
-//      map.merge(c, -1, Integer::sum);
-//    }
-//    return map.values().stream().allMatch(count -> count == 0);
-//  }
+  }
 
 }
