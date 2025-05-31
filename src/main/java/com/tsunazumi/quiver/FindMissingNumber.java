@@ -11,10 +11,8 @@ public class FindMissingNumber {
   }
 
   public static int findMissingNumber(int[] nums) {
-    // Get the length that it should be if adding the missing number
-    int n = nums.length + 1;
     // magic formula
-    int expectedSum = (n * (n + 1)) / 2;
+    int expectedSum = ((nums.length + 1) * (nums.length + 2)) / 2;
 
     int actualSum = Arrays.stream(nums).sum();
 
