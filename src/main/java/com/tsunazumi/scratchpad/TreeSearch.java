@@ -68,6 +68,9 @@ public class TreeSearch {
   public static void depthFirstWalk(TreeNode root, List<Integer> list) {
   }
 
+  public static void depthSearchFirstWalk(TreeNode root, int needle, List<Integer> list) {
+  }
+
   public static boolean depthFirstSearch(TreeNode root, int needle) {
     return false;
   }

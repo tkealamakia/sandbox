@@ -135,30 +135,8 @@ public class TreeSearch {
     return false;
 
   }
-  public static TreeNode findLowestCommonAncestor(TreeNode root, int a, int b) {
-    if (root == null) {
-      return null;
-    }
 
-    // If we find either a or b, return this node (base case)
-    if (root.value == a || root.value == b) {
-      return root;
-    }
-
-    // Traverse left and right subtrees
-    TreeNode left = findLowestCommonAncestor(root.left, a, b);
-    TreeNode right = findLowestCommonAncestor(root.right, a, b);
-
-    // If both left and right are non-null, we've found the LCA
-    if (left != null && right != null) {
-      return root;
-    }
-
-    // If only one side is non-null, return the non-null value
-    return left != null ? left : right;
-  }
-
-  public static int findLowestCommonAncestor2(TreeNode root, int a, int b) {
+  public static int findLowestCommonAncestor(TreeNode root, int a, int b) {
     if (root == null) {
       return 0;
     }
