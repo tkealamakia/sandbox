@@ -47,11 +47,11 @@ public class TreeSearch {
 //    depthFirstWalk(three, list);
 //    list.forEach(System.out::println);
 
-    System.out.println(maxDepth(root));
+//    System.out.println(maxDepth(root));
 //    System.out.println(isTreeBalanced(root));
 
-//    findLowestCommonAncestor(root, 5, 15);
-//    System.out.println(findLowestCommonAncestor(root, 7, 15));
+    findLowestCommonAncestor(root, 5, 15);
+    System.out.println(findLowestCommonAncestor(root, 7, 15));
   }
 
   public static int maxDepth(TreeNode root) {
@@ -151,24 +151,18 @@ public class TreeSearch {
     return Collections.max(aList);
 
   }
-  public static boolean depthFirstSearchWalk(TreeNode root, int needle, List<Integer> col) {
+  public static void depthFirstSearchWalk(TreeNode root, int needle, List<Integer> col) {
     if (root == null) {
-      return false;
+      return;
     }
 
     if (root.value == needle) {
-      return true;  // Found the value
+      return;  // Found the value
     }
 
-    if (depthFirstSearchWalk(root.left, needle, col)) {
-      col.add(root.value);
-      return true;
-    }
-    if (depthFirstSearchWalk(root.right, needle, col)) {
-      col.add(root.value);
-      return true;
-    }
-    return false;
+    col.add(root.value);
+    depthFirstSearchWalk(root.left, needle, col);
+    depthFirstSearchWalk(root.right, needle, col);
   }
 
 
