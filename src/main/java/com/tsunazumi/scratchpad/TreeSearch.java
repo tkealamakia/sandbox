@@ -76,8 +76,8 @@ public class TreeSearch {
     return false;
   }
 
-  public static TreeNode findLowestCommonAncestor(TreeNode root, int a, int b) {
-    return null;
+  public static int findLowestCommonAncestor(TreeNode root, int a, int b) {
+    return -1;
   }
 
   public static void depthFirstSearchWalk(TreeNode root, int needle, List<Integer> col) {
