@@ -117,9 +117,6 @@ public class TreeSearch {
     if (root == null) {
       return false;
     }
-    if (root.value == needle) {
-      return true;
-    }
     Queue<TreeNode> queue = new LinkedList<>();
     queue.add(root);
 
@@ -128,12 +125,15 @@ public class TreeSearch {
       if (current.value == needle) {
         return true;
       }
-
-      queue.add(current.left);
-      queue.add(current.right);
+      if (current.left != null) {
+        queue.add(current.left);
+      }
+      if (current.right != null) {
+        queue.add(current.right);
+      }
     }
-    return false;
 
+    return false;
   }
 
   public static int findLowestCommonAncestor(TreeNode root, int a, int b) {
