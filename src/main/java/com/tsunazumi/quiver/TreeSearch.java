@@ -50,8 +50,7 @@ public class TreeSearch {
 //    System.out.println(maxDepth(root));
 //    System.out.println(isTreeBalanced(root));
 
-    findLowestCommonAncestor(root, 5, 15);
-    System.out.println(findLowestCommonAncestor(root, 7, 15));
+    System.out.println(findLowestCommonAncestor(root, 5, 7));
   }
 
   public static int maxDepth(TreeNode root) {
@@ -138,7 +137,7 @@ public class TreeSearch {
 
   public static int findLowestCommonAncestor(TreeNode root, int a, int b) {
     if (root == null) {
-      return 0;
+      return -1;
     }
     // get a set of all the nodes visited to get a
     List<Integer> aList = new ArrayList<>();
@@ -148,21 +147,25 @@ public class TreeSearch {
     depthFirstSearchWalk(root, b, bList);
 
     aList.retainAll(bList);
-    return Collections.max(aList);
+    return aList.get(aList.size() -1);
 
   }
-  public static void depthFirstSearchWalk(TreeNode root, int needle, List<Integer> col) {
+  public static boolean depthFirstSearchWalk(TreeNode root, int needle, List<Integer> col) {
     if (root == null) {
-      return;
-    }
-
-    if (root.value == needle) {
-      return;  // Found the value
+      return false;
     }
 
     col.add(root.value);
-    depthFirstSearchWalk(root.left, needle, col);
-    depthFirstSearchWalk(root.right, needle, col);
+    if (root.value == needle) { return true; }
+
+
+    if (depthFirstSearchWalk(root.left, needle, col) ||
+        depthFirstSearchWalk(root.right, needle, col)) {
+      return true;
+    }
+
+    col.remove(col.size() - 1); // backtrack if not on path
+    return false;
   }
 
 
