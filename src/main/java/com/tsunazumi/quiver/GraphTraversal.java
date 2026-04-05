@@ -17,8 +17,16 @@ public class GraphTraversal {
     graph.put(6, Arrays.asList(3));  // Node 6 connected to 3
     graph.put(7, Arrays.asList(3));  // Node 7 connected to 3
 
-    List<Integer> result = dfs(graph, 6);
-    for (int i : result) {
+    List<Integer> dfsResult = dfs(graph, 6);
+    System.out.println("DFS:");
+    for (int i : dfsResult) {
+      System.out.println(i);
+    }
+
+    System.out.println("BFS:");
+
+    List<Integer> bfsResult = bfs(graph, 6);
+    for (int i : bfsResult) {
       System.out.println(i);
     }
   }
