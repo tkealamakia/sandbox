@@ -80,7 +80,8 @@ public class TreeSearch {
     return -1;
   }
 
-  public static void depthFirstSearchWalk(TreeNode root, int needle, List<Integer> col) {
+  public static boolean depthFirstSearchWalk(TreeNode root, int needle, List<Integer> col) {
+    return false;
   }
 
 }

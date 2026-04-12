@@ -147,6 +147,11 @@ public class TreeSearch {
     depthFirstSearchWalk(root, b, bList);
 
     aList.retainAll(bList);
+
+    if (aList.isEmpty()) {
+      return -1;
+    }
+
     return aList.get(aList.size() -1);
 
   }
