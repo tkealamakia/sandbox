@@ -9,17 +9,20 @@ public class MaxSubarray {
     System.out.println(result);
 
   }
+
+  // Given an integer array, find the contiguous subarray with the largest sum
+  // and return that sum. (Kadane's Algorithm)
   static int maxSubArray(int[] nums) {
     int max = nums[0];
-    int slidingWindow = 0;
+    int runningSum = 0;
 
     for (int i = 0; i < nums.length; i++) {
       // check if the current number is greater than itself plus the current max.  If it is
-      // then we restart the sliding window and make the current number our new max
-      slidingWindow = Math.max(nums[i], nums[i] + slidingWindow);
+      // then we restart the runningSum
+      runningSum = Math.max(nums[i], nums[i] + runningSum);
       // keep track of the highest ever seen subarray sum
-      // by checking if the current sliding window is greater than the maxSubArray
-      max = Math.max(slidingWindow, max);
+      // by checking if the current runningSum is greater than the max
+      max = Math.max(runningSum, max);
     }
     return max;
   }
