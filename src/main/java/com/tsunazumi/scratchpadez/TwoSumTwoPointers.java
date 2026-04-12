@@ -1,6 +1,6 @@
 package com.tsunazumi.scratchpadez;
 
-public class TwoSumSlidingWindow {
+public class TwoSumTwoPointers {
   public static void main(String[] args) {
     int[] nums = {1,2,4,4};
     System.out.println(isTwoSumSorted(nums, 8));
