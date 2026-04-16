@@ -4,13 +4,14 @@ package com.tsunazumi.scratchpadez;
 public class TwoSum {
   public static void main(String[] args) {
     int[] nums = {1,2,4,4};
-    System.out.println(isTwoSum(nums, 8));
+    int[] result = returnTwoSumIndexes(nums, 8);
+    for (int i : result) {
+      System.out.println(i);
+    }
   }
 
-  public static boolean isTwoSum(int[] nums, int sum) {
-    return false;
-  }
 
+  // Return the indicies of the two numbers that add up to the target
   public static int[] returnTwoSumIndexes(int[] nums, int target) {
     return null;
   }

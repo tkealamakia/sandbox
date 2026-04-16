@@ -5,20 +5,12 @@ import java.util.*;
 public class TwoSum {
   public static void main(String[] args) {
     int[] nums = {1,2,4,4};
-    System.out.println(isTwoSum(nums, 8));
+    int[] result = returnTwoSumIndexes(nums, 8);
+    for (int i : result) {
+      System.out.println(i);
+    }
   }
 
-  public static boolean isTwoSum(int[] nums, int sum) {
-    Set<Integer> set = new HashSet<>();
-    for (int i : nums) {
-      if (set.contains(sum - i)) {
-        return true;
-      }
-      // Accumulate the numbers we have seen so we don't have to go over the list every time
-      set.add(i);
-    }
-    return false;
-  }
 
   public static int[] returnTwoSumIndexes(int[] nums, int target) {
     Map<Integer, Integer> map = new HashMap<>();
