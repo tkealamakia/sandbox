@@ -26,9 +26,6 @@ public class GraphTraversal {
     return null;
   }
 
-  private static void dfsHelper(Map<Integer, List<Integer>> graph, int node, List<Integer> traversal, Set<Integer> seen) {
-  }
-
   public static List<Integer> bfs(Map<Integer, List<Integer>> graph, int start) {
     return null;
   }
