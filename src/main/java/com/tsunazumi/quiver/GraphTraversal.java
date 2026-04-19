@@ -48,8 +48,8 @@ public class GraphTraversal {
   }
 
   public static List<Integer> bfs(Map<Integer, List<Integer>> graph, int start) {
+    List<Integer> traversal = new ArrayList<>();
     Set<Integer> seen = new HashSet<>();
-    List<Integer> visited = new ArrayList<>();
     Queue<Integer> queue = new LinkedList<>();
     queue.add(start);
 
@@ -57,11 +57,11 @@ public class GraphTraversal {
       int node = queue.poll();
       if (!seen.contains(node)) {
         seen.add(node);
-        visited.add(node);
+        traversal.add(node);
         queue.addAll(graph.getOrDefault(node, Collections.emptyList()));
       }
     }
-    return visited;
+    return traversal;
   }
 
 }
