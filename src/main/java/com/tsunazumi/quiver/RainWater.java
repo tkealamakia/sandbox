@@ -21,7 +21,7 @@ public class RainWater {
         // make it the new max
         if (height[left] >= maxLeft) {
           maxLeft = height[left];
-        // else calculate water tapped by subtracting
+        // else calculate water trapped by subtracting
         // maxLeft from the current left
         } else {
           water += maxLeft - height[left];
