@@ -2,6 +2,10 @@ package com.tsunazumi.scratchpadez;
 
 import java.util.*;
 
+// Given an array of numbers and a target number,
+// determine if you can achieve the target sum by
+// adding numbers from the array
+// (you can use each number multiple times).
 public class CanSum {
   public static void main(String[] args) {
     List<Integer> list = Arrays.asList(7,14);
